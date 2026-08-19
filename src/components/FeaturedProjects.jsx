@@ -17,20 +17,20 @@ export default function FeaturedProjects({ onOpenPlanner }) {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="py-24 relative overflow-hidden bg-[#070b12] border-t border-b border-white/5">
+    <section id="projects" className="py-24 relative overflow-hidden bg-[#060c08] border-t border-b border-white/5">
       <div className="container-custom">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="glass-badge">
-              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+              <Sparkles className="w-3.5 h-3.5 text-lime-400" />
               <span>PROVEN PORTFOLIO</span>
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 font-syne">
             Real Projects. <br />
-            <span className="text-gradient-cyan">Intelligent Results.</span>
+            <span className="text-gradient-animated-lime">Intelligent Results.</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-300">
             A glimpse into some of our high-profile turnkey automation and security deployments across South India.
@@ -42,7 +42,7 @@ export default function FeaturedProjects({ onOpenPlanner }) {
           {FEATURED_PROJECTS.map((proj) => (
             <div
               key={proj.id}
-              className="glass-card group overflow-hidden border-white/10 hover:border-cyan-500/40 p-6 flex flex-col justify-between"
+              className="glass-card group overflow-hidden border-white/10 hover:border-lime-500/40 p-6 flex flex-col justify-between"
             >
               <div>
                 {/* Project Image & Overlay */}
@@ -56,14 +56,14 @@ export default function FeaturedProjects({ onOpenPlanner }) {
                   
                   {/* Category & Location Badges */}
                   <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                    <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-xs font-mono text-cyan-300 font-semibold">
+                    <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-lime-500/30 text-xs font-mono text-lime-300 font-semibold">
                       {proj.category}
                     </span>
                   </div>
 
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                     <div className="flex items-center gap-1.5 text-xs font-mono text-slate-200">
-                      <MapPin className="w-3.5 h-3.5 text-cyan-400" />
+                      <MapPin className="w-3.5 h-3.5 text-lime-400" />
                       <span>{proj.location}</span>
                     </div>
                     <span className="text-[11px] font-mono text-slate-400 bg-black/60 px-2 py-0.5 rounded border border-white/10">
@@ -73,7 +73,7 @@ export default function FeaturedProjects({ onOpenPlanner }) {
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors font-syne">
                   {proj.title}
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed mb-6">
@@ -102,10 +102,10 @@ export default function FeaturedProjects({ onOpenPlanner }) {
 
                 <button
                   onClick={() => setSelectedProject(proj)}
-                  className="btn-secondary text-xs py-2 px-4 flex items-center gap-1.5"
+                  className="btn-secondary text-xs py-2 px-4 flex items-center gap-1.5 cursor-pointer"
                 >
                   <span>View Case Study</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-cyan-400" />
+                  <ArrowRight className="w-3.5 h-3.5 text-lime-400" />
                 </button>
               </div>
 
@@ -119,21 +119,21 @@ export default function FeaturedProjects({ onOpenPlanner }) {
       {selectedProject && (
         <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
           <div 
-            className="glass-panel max-w-2xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto border-cyan-500/40"
+            className="glass-panel max-w-2xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto border-lime-500/40"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
               onClick={() => setSelectedProject(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors"
+              className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
 
             <span className="glass-badge mb-3">{selectedProject.category}</span>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1 font-syne">
               {selectedProject.title}
             </h3>
-            <p className="text-xs font-mono text-cyan-400 mb-4">
+            <p className="text-xs font-mono text-lime-400 mb-4">
               📍 {selectedProject.location} • {selectedProject.scale}
             </p>
 
@@ -152,15 +152,15 @@ export default function FeaturedProjects({ onOpenPlanner }) {
             {/* Metrics Bar */}
             <div className="grid grid-cols-3 gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/10 mb-6 text-center font-mono">
               <div>
-                <p className="text-lg font-bold text-cyan-400">{selectedProject.metrics.devices}</p>
+                <p className="text-lg font-bold text-lime-400">{selectedProject.metrics.devices}</p>
                 <p className="text-[10px] text-slate-400 uppercase">Integrated</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-cyan-400">{selectedProject.metrics.cameras}</p>
+                <p className="text-lg font-bold text-lime-400">{selectedProject.metrics.cameras}</p>
                 <p className="text-[10px] text-slate-400 uppercase">Surveillance</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-cyan-400">{selectedProject.metrics.installationTime}</p>
+                <p className="text-lg font-bold text-lime-400">{selectedProject.metrics.installationTime}</p>
                 <p className="text-[10px] text-slate-400 uppercase">Turnaround</p>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function FeaturedProjects({ onOpenPlanner }) {
                   setSelectedProject(null);
                   onOpenPlanner();
                 }}
-                className="btn-primary w-full sm:w-auto text-xs py-2.5 px-6"
+                className="btn-primary w-full sm:w-auto text-xs py-2.5 px-6 cursor-pointer"
               >
                 <span>Book Site Assessment</span>
                 <ArrowRight className="w-3.5 h-3.5" />

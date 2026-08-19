@@ -233,7 +233,7 @@ export const PRESET_SCENES = [
     id: "cinema",
     name: "Cinema & Party",
     icon: "Film",
-    lights: "Cyber Cyan Ambience (15%)",
+    lights: "Emerald Aura Ambience (15%)",
     door: "Guest Access Enabled",
     cctv: "Perimeter Monitoring",
     alarm: "Exterior Zones Only",

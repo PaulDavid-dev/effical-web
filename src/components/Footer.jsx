@@ -12,10 +12,11 @@ import {
   Globe
 } from 'lucide-react';
 import { SITE_INFO } from '../data/siteContent';
+import Logo from './Logo';
 
 export default function Footer({ onOpenPlanner }) {
   return (
-    <footer className="bg-[#05070b] border-t border-white/10 pt-16 pb-12 relative z-10 text-slate-400 text-sm">
+    <footer className="bg-[#030604] border-t border-emerald-500/20 pt-16 pb-12 relative z-10 text-slate-400 text-sm">
       <div className="container-custom">
         
         {/* Main Footer Grid */}
@@ -23,18 +24,8 @@ export default function Footer({ onOpenPlanner }) {
           
           {/* Col 1 & 2: Brand Info */}
           <div className="lg:col-span-2 flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-500/40 text-cyan-400">
-                <Shield className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="font-heading font-extrabold text-xl text-white tracking-wider">
-                  ESS — EFFICAL
-                </span>
-                <p className="text-[10px] font-mono text-cyan-400 uppercase tracking-widest">
-                  Smart Solutions
-                </p>
-              </div>
+            <div className="flex items-start gap-3">
+              <Logo variant="dark" size="md" showTagline={true} />
             </div>
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
@@ -47,7 +38,7 @@ export default function Footer({ onOpenPlanner }) {
                 href={`https://wa.me/${SITE_INFO.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-400 hover:text-emerald-400 flex items-center justify-center transition-colors text-slate-300"
+                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-lime-400 hover:text-lime-400 flex items-center justify-center transition-colors text-slate-300"
                 aria-label="WhatsApp"
               >
                 <MessageSquare className="w-4 h-4" />
@@ -56,7 +47,7 @@ export default function Footer({ onOpenPlanner }) {
               {/* Instagram */}
               <a 
                 href="#"
-                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400 hover:text-pink-400 flex items-center justify-center transition-colors text-slate-300"
+                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-lime-400 hover:text-lime-400 flex items-center justify-center transition-colors text-slate-300"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -67,7 +58,7 @@ export default function Footer({ onOpenPlanner }) {
               {/* LinkedIn */}
               <a 
                 href="#"
-                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-400 hover:text-cyan-400 flex items-center justify-center transition-colors text-slate-300"
+                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-lime-400 hover:text-lime-400 flex items-center justify-center transition-colors text-slate-300"
                 aria-label="LinkedIn"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -78,7 +69,7 @@ export default function Footer({ onOpenPlanner }) {
               {/* Facebook */}
               <a 
                 href="#"
-                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-blue-400 hover:text-blue-400 flex items-center justify-center transition-colors text-slate-300"
+                className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-lime-400 hover:text-lime-400 flex items-center justify-center transition-colors text-slate-300"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -94,12 +85,12 @@ export default function Footer({ onOpenPlanner }) {
               Solutions
             </h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#solutions" className="hover:text-cyan-400 transition-colors">Smart Home Automation</a></li>
-              <li><a href="#solutions" className="hover:text-cyan-400 transition-colors">AI 4K CCTV Surveillance</a></li>
-              <li><a href="#solutions" className="hover:text-cyan-400 transition-colors">Intrusion Alarm Systems</a></li>
-              <li><a href="#solutions" className="hover:text-cyan-400 transition-colors">Automatic Gates & Barriers</a></li>
-              <li><a href="#solutions" className="hover:text-cyan-400 transition-colors">Enterprise Wi-Fi & Fiber</a></li>
-              <li><a href="#solutions" className="hover:text-cyan-400 transition-colors">Video Door Phone Intercom</a></li>
+              <li><a href="#solutions" className="hover:text-lime-400 transition-colors">Smart Home Automation</a></li>
+              <li><a href="#solutions" className="hover:text-lime-400 transition-colors">AI 4K CCTV Surveillance</a></li>
+              <li><a href="#solutions" className="hover:text-lime-400 transition-colors">Intrusion Alarm Systems</a></li>
+              <li><a href="#solutions" className="hover:text-lime-400 transition-colors">Automatic Gates & Barriers</a></li>
+              <li><a href="#solutions" className="hover:text-lime-400 transition-colors">Enterprise Wi-Fi & Fiber</a></li>
+              <li><a href="#solutions" className="hover:text-lime-400 transition-colors">Video Door Phone Intercom</a></li>
             </ul>
           </div>
 
@@ -109,12 +100,12 @@ export default function Footer({ onOpenPlanner }) {
               Company
             </h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#industries" className="hover:text-cyan-400 transition-colors">Industries Served</a></li>
-              <li><a href="#ecosystem" className="hover:text-cyan-400 transition-colors">Ecosystem Platform</a></li>
-              <li><a href="#projects" className="hover:text-cyan-400 transition-colors">Featured Projects</a></li>
-              <li><a href="#why-ess" className="hover:text-cyan-400 transition-colors">Why Choose ESS</a></li>
-              <li><a href="#how-it-works" className="hover:text-cyan-400 transition-colors">How We Work (Process)</a></li>
-              <li><a href="#partners" className="hover:text-cyan-400 transition-colors">Technology Partners</a></li>
+              <li><a href="#industries" className="hover:text-lime-400 transition-colors">Industries Served</a></li>
+              <li><a href="#ecosystem" className="hover:text-lime-400 transition-colors">Ecosystem Platform</a></li>
+              <li><a href="#projects" className="hover:text-lime-400 transition-colors">Featured Projects</a></li>
+              <li><a href="#why-ess" className="hover:text-lime-400 transition-colors">Why Choose ESS</a></li>
+              <li><a href="#how-it-works" className="hover:text-lime-400 transition-colors">How We Work (Process)</a></li>
+              <li><a href="#partners" className="hover:text-lime-400 transition-colors">Technology Partners</a></li>
             </ul>
           </div>
 
@@ -125,18 +116,18 @@ export default function Footer({ onOpenPlanner }) {
             </h4>
             <div className="space-y-2.5 text-xs">
               <div className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                <MapPin className="w-3.5 h-3.5 text-lime-400 shrink-0 mt-0.5" />
                 <span>{SITE_INFO.location}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                <a href={`tel:${SITE_INFO.phone}`} className="hover:text-cyan-400 transition-colors">
+                <Phone className="w-3.5 h-3.5 text-lime-400 shrink-0" />
+                <a href={`tel:${SITE_INFO.phone}`} className="hover:text-lime-400 transition-colors">
                   {SITE_INFO.phone}
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                <a href={`mailto:${SITE_INFO.email}`} className="hover:text-cyan-400 transition-colors">
+                <Mail className="w-3.5 h-3.5 text-lime-400 shrink-0" />
+                <a href={`mailto:${SITE_INFO.email}`} className="hover:text-lime-400 transition-colors">
                   {SITE_INFO.email}
                 </a>
               </div>
@@ -153,11 +144,11 @@ export default function Footer({ onOpenPlanner }) {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>{SITE_INFO.copyright}</p>
           <div className="flex items-center gap-4 text-slate-400">
-            <a href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-lime-400 transition-colors">Privacy Policy</a>
             <span>•</span>
-            <a href="#" className="hover:text-cyan-400 transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-lime-400 transition-colors">Terms of Service</a>
             <span>•</span>
-            <a href="#" className="hover:text-cyan-400 transition-colors">Warranty Policy</a>
+            <a href="#" className="hover:text-lime-400 transition-colors">Warranty Policy</a>
           </div>
         </div>
 

@@ -14,10 +14,10 @@ import { WHY_ESS_PILLARS } from '../data/siteContent';
 
 export default function WhyESS({ onOpenPlanner }) {
   return (
-    <section id="why-ess" className="py-24 relative overflow-hidden bg-[#06090e] z-10">
+    <section id="why-ess" className="py-24 relative overflow-hidden bg-[#040806] z-10">
       
       {/* Background glow */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="container-custom relative z-10">
         
@@ -25,13 +25,13 @@ export default function WhyESS({ onOpenPlanner }) {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="glass-badge">
-              <Award className="w-3.5 h-3.5 text-amber-400" />
+              <Award className="w-3.5 h-3.5 text-lime-400" />
               <span>THE ESS PROMISE</span>
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 font-syne">
             A smart home should still be working when your <br />
-            <span className="text-gradient-animated-amber">kids leave for college.</span>
+            <span className="text-gradient-animated-emerald">kids leave for college.</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-300">
             Why leading architects, luxury homeowners, and corporate facility heads choose ESS over generic, fragmented contractors.
@@ -43,13 +43,13 @@ export default function WhyESS({ onOpenPlanner }) {
           {WHY_ESS_PILLARS.map((pillar) => (
             <div
               key={pillar.number}
-              className="glass-card p-6 border-white/10 hover:border-amber-500/40 flex flex-col justify-between group"
+              className="glass-card p-6 border-white/10 hover:border-lime-500/40 flex flex-col justify-between group"
             >
               <div>
-                <span className="text-3xl font-extrabold font-mono text-amber-400/40 group-hover:text-amber-400 group-hover:text-glow-amber transition-all block mb-4">
+                <span className="text-3xl font-extrabold font-mono text-lime-400/40 group-hover:text-lime-400 group-hover:text-glow-lime transition-all block mb-4">
                   {pillar.number}
                 </span>
-                <h3 className="text-lg font-bold text-white mb-2 font-syne group-hover:text-amber-300 transition-colors">
+                <h3 className="text-lg font-bold text-white mb-2 font-syne group-hover:text-lime-300 transition-colors">
                   {pillar.title}
                 </h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
@@ -73,8 +73,8 @@ export default function WhyESS({ onOpenPlanner }) {
               <div className="sm:col-span-4 font-heading font-semibold text-slate-300">
                 Single Point of Accountability
               </div>
-              <div className="sm:col-span-4 flex items-center gap-2 text-amber-300 font-semibold bg-amber-500/10 p-2 rounded-lg border border-amber-500/20">
-                <Check className="w-4 h-4 text-amber-400 shrink-0" />
+              <div className="sm:col-span-4 flex items-center gap-2 text-lime-300 font-semibold bg-lime-500/10 p-2 rounded-lg border border-lime-500/20">
+                <Check className="w-4 h-4 text-lime-400 shrink-0" />
                 <span>ESS: 1 Unified Engineering Team</span>
               </div>
               <div className="sm:col-span-4 flex items-center gap-2 text-slate-400 p-2">
@@ -88,8 +88,8 @@ export default function WhyESS({ onOpenPlanner }) {
               <div className="sm:col-span-4 font-heading font-semibold text-slate-300">
                 Aesthetic Wire Concealment
               </div>
-              <div className="sm:col-span-4 flex items-center gap-2 text-amber-300 font-semibold bg-amber-500/10 p-2 rounded-lg border border-amber-500/20">
-                <Check className="w-4 h-4 text-amber-400 shrink-0" />
+              <div className="sm:col-span-4 flex items-center gap-2 text-lime-300 font-semibold bg-lime-500/10 p-2 rounded-lg border border-lime-500/20">
+                <Check className="w-4 h-4 text-lime-400 shrink-0" />
                 <span>100% Flush Architecture</span>
               </div>
               <div className="sm:col-span-4 flex items-center gap-2 text-slate-400 p-2">
@@ -103,8 +103,8 @@ export default function WhyESS({ onOpenPlanner }) {
               <div className="sm:col-span-4 font-heading font-semibold text-slate-300">
                 Cross-System Automation
               </div>
-              <div className="sm:col-span-4 flex items-center gap-2 text-amber-300 font-semibold bg-amber-500/10 p-2 rounded-lg border border-amber-500/20">
-                <Check className="w-4 h-4 text-amber-400 shrink-0" />
+              <div className="sm:col-span-4 flex items-center gap-2 text-lime-300 font-semibold bg-lime-500/10 p-2 rounded-lg border border-lime-500/20">
+                <Check className="w-4 h-4 text-lime-400 shrink-0" />
                 <span>Lights, Gates & CCTV Linked</span>
               </div>
               <div className="sm:col-span-4 flex items-center gap-2 text-slate-400 p-2">
@@ -118,8 +118,8 @@ export default function WhyESS({ onOpenPlanner }) {
               <div className="sm:col-span-4 font-heading font-semibold text-slate-300">
                 Post-Installation SLA & AMC
               </div>
-              <div className="sm:col-span-4 flex items-center gap-2 text-amber-300 font-semibold bg-amber-500/10 p-2 rounded-lg border border-amber-500/20">
-                <Check className="w-4 h-4 text-amber-400 shrink-0" />
+              <div className="sm:col-span-4 flex items-center gap-2 text-lime-300 font-semibold bg-lime-500/10 p-2 rounded-lg border border-lime-500/20">
+                <Check className="w-4 h-4 text-lime-400 shrink-0" />
                 <span>24/7 Priority Emergency Support</span>
               </div>
               <div className="sm:col-span-4 flex items-center gap-2 text-slate-400 p-2">

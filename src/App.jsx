@@ -25,8 +25,8 @@ export default function App() {
   const closePlanner = () => setPlannerOpen(false);
 
   return (
-    <div className="min-h-screen bg-[#06090e] text-[#f8fafc] relative selection:bg-amber-500/30 selection:text-amber-200">
-      
+    <div className="min-h-screen bg-[#040806] text-[#f8fafc] relative selection:bg-emerald-500/30 selection:text-lime-200">
+
       {/* Top Fixed Floating Navigation with Scroll Progress Bar */}
       <Navbar onOpenPlanner={openPlanner} />
 
@@ -38,7 +38,7 @@ export default function App() {
         {/* 2. Trusted By Homes & Businesses (Industries) */}
         <TrustedIndustries onOpenPlanner={openPlanner} />
 
-        {/* 3. Luxury Glass Touch Switches & 3-Protocol Architecture (Onwords-Inspired Pro Level UI) */}
+        {/* 3. Luxury Glass Touch Switches & 3-Protocol Architecture */}
         <SmartTouchSwitchSection onOpenPlanner={openPlanner} />
 
         {/* 4. Solutions Section (Smart Home, AI CCTV, Gate Automation, Networking) */}
@@ -53,23 +53,23 @@ export default function App() {
         {/* 7. Smart Energy Intelligence & Solar Telemetry Dashboard */}
         <EnergyTelemetrySection onOpenPlanner={openPlanner} />
 
-        {/* 8. Featured Projects Portfolio (Villas, HQ, Penthouses, Plants) */}
+        {/* 8. Technology Partners & Brand Marquee */}
+        <TechPartners />
+
+        {/* 9. Featured Projects Portfolio (Villas, HQ, Penthouses, Plants) */}
         <FeaturedProjects onOpenPlanner={openPlanner} />
 
-        {/* 9. Why ESS (5 Pillars & Turnkey vs Generic Comparison) */}
+        {/* 10. Why ESS (5 Pillars & Turnkey vs Generic Comparison) */}
         <WhyESS onOpenPlanner={openPlanner} />
 
-        {/* 10. How We Work (5-Step Journey from Idea to Installation) */}
+        {/* 11. How We Work (5-Step Journey from Idea to Installation) */}
         <HowWeWork onOpenPlanner={openPlanner} />
-
-        {/* 11. Technology Partners & Brand Marquee */}
-        <TechPartners />
 
         {/* 12. Client Testimonials & Experiences */}
         <Testimonials />
 
         {/* 13. Frequently Asked Questions */}
-        <FAQSection />
+        {/* <FAQSection /> */}
 
         {/* 14. Final Call To Action */}
         <FinalCTA onOpenPlanner={openPlanner} />
@@ -82,9 +82,9 @@ export default function App() {
       <FloatingActions />
 
       {/* Interactive Space Planner & Consultation Booking Modal */}
-      <SmartPlannerModal 
-        isOpen={plannerOpen} 
-        onClose={closePlanner} 
+      <SmartPlannerModal
+        isOpen={plannerOpen}
+        onClose={closePlanner}
       />
 
     </div>

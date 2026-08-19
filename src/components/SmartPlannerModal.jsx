@@ -14,9 +14,9 @@ import {
   ShieldCheck, 
   MessageSquare, 
   Send, 
-  Sparkles,
-  ArrowRight,
-  CheckCircle2
+  Sparkles, 
+  ArrowRight, 
+  CheckCircle2 
 } from 'lucide-react';
 import { SITE_INFO } from '../data/siteContent';
 
@@ -80,13 +80,13 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div 
-        className="glass-panel max-w-2xl w-full p-6 sm:p-8 relative max-h-[92vh] overflow-y-auto border-cyan-500/40"
+        className="glass-panel max-w-2xl w-full p-6 sm:p-8 relative max-h-[92vh] overflow-y-auto border-lime-500/40 bg-[#070e0a]/98"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors"
+          className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
@@ -95,12 +95,12 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="glass-badge">
-                <Sparkles className="w-3.5 h-3.5" />
+                <Sparkles className="w-3.5 h-3.5 text-lime-400" />
                 <span>INTERACTIVE PROPOSAL BUILDER</span>
               </span>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1 font-syne">
               Book a Free Site Visit & Estimate
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 mb-6">
@@ -111,7 +111,7 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
               
               {/* Step 1: Property Type */}
               <div>
-                <label className="text-xs font-mono uppercase text-cyan-400 font-bold block mb-2.5">
+                <label className="text-xs font-mono uppercase text-lime-400 font-bold block mb-2.5">
                   1. Select Property Type:
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
@@ -123,13 +123,13 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
                         type="button"
                         key={pt.label}
                         onClick={() => setPropertyType(pt.label)}
-                        className={`p-3 rounded-xl border text-xs font-heading font-semibold flex items-center gap-2 transition-all ${
+                        className={`p-3 rounded-xl border text-xs font-heading font-semibold flex items-center gap-2 transition-all cursor-pointer ${
                           isSel 
-                            ? 'bg-cyan-500/20 border-cyan-400 text-white shadow-md shadow-cyan-500/20' 
+                            ? 'bg-lime-500/20 border-lime-400 text-white shadow-md shadow-lime-500/20' 
                             : 'bg-white/5 border-white/10 text-slate-400 hover:text-white'
                         }`}
                       >
-                        <Icon className={`w-4 h-4 ${isSel ? 'text-cyan-400' : 'text-slate-500'}`} />
+                        <Icon className={`w-4 h-4 ${isSel ? 'text-lime-400' : 'text-slate-500'}`} />
                         <span>{pt.label}</span>
                       </button>
                     );
@@ -139,7 +139,7 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
 
               {/* Step 2: Desired Modules */}
               <div>
-                <label className="text-xs font-mono uppercase text-cyan-400 font-bold block mb-2.5">
+                <label className="text-xs font-mono uppercase text-lime-400 font-bold block mb-2.5">
                   2. Choose Required Automation & Security Modules:
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -151,17 +151,17 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
                         type="button"
                         key={mod.name}
                         onClick={() => toggleModule(mod.name)}
-                        className={`p-3 rounded-xl border text-xs font-medium flex items-center justify-between transition-all ${
+                        className={`p-3 rounded-xl border text-xs font-medium flex items-center justify-between transition-all cursor-pointer ${
                           isSel
-                            ? 'bg-cyan-500/15 border-cyan-500/60 text-white'
+                            ? 'bg-lime-500/15 border-lime-500/60 text-white'
                             : 'bg-white/[0.03] border-white/10 text-slate-400 hover:text-white'
                         }`}
                       >
                         <div className="flex items-center gap-2">
-                          <Icon className={`w-4 h-4 ${isSel ? 'text-cyan-400' : 'text-slate-500'}`} />
+                          <Icon className={`w-4 h-4 ${isSel ? 'text-lime-400' : 'text-slate-500'}`} />
                           <span>{mod.name}</span>
                         </div>
-                        <div className={`w-4 h-4 rounded-md flex items-center justify-center border ${isSel ? 'bg-cyan-400 border-cyan-400 text-black' : 'border-white/20'}`}>
+                        <div className={`w-4 h-4 rounded-md flex items-center justify-center border ${isSel ? 'bg-lime-400 border-lime-400 text-slate-950' : 'border-white/20'}`}>
                           {isSel && <Check className="w-3 h-3" />}
                         </div>
                       </button>
@@ -172,16 +172,16 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
 
               {/* Step 3: Construction Stage */}
               <div>
-                <label className="text-xs font-mono uppercase text-cyan-400 font-bold block mb-2">
+                <label className="text-xs font-mono uppercase text-lime-400 font-bold block mb-2">
                   3. Current Property Stage:
                 </label>
                 <select
                   value={propertyStage}
                   onChange={(e) => setPropertyStage(e.target.value)}
-                  className="w-full p-3 rounded-xl bg-slate-900 border border-white/15 text-white text-xs sm:text-sm focus:border-cyan-400 focus:outline-none"
+                  className="w-full p-3 rounded-xl bg-[#040806] border border-white/15 text-white text-xs sm:text-sm focus:border-lime-400 focus:outline-none"
                 >
                   {stagesList.map((stg) => (
-                    <option key={stg} value={stg} className="bg-slate-900 text-white">
+                    <option key={stg} value={stg} className="bg-[#070e0a] text-white">
                       {stg}
                     </option>
                   ))}
@@ -198,7 +198,7 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
                     placeholder="e.g. Rajesh Kumar"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full p-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:border-cyan-400 focus:outline-none"
+                    className="w-full p-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:border-lime-400 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -209,7 +209,7 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
                     placeholder="e.g. +91 98765 43210"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full p-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:border-cyan-400 focus:outline-none"
+                    className="w-full p-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:border-lime-400 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -220,7 +220,7 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
                     placeholder="e.g. Coimbatore, Chennai"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="w-full p-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:border-cyan-400 focus:outline-none"
+                    className="w-full p-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs focus:border-lime-400 focus:outline-none"
                   />
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
                 <button
                   type="button"
                   onClick={handleWhatsAppSubmit}
-                  className="btn-whatsapp w-full sm:w-auto text-xs py-3 px-6"
+                  className="btn-whatsapp w-full sm:w-auto text-xs py-3 px-6 cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Send via WhatsApp (Instant)</span>
@@ -238,7 +238,7 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
 
                 <button
                   type="submit"
-                  className="btn-primary w-full sm:w-auto text-xs py-3 px-7"
+                  className="btn-primary w-full sm:w-auto text-xs py-3 px-7 cursor-pointer"
                 >
                   <Send className="w-4 h-4" />
                   <span>Submit Inquiry</span>
@@ -252,11 +252,11 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
             <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto mb-4 animate-bounce">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">
+            <h3 className="text-2xl font-bold text-white mb-2 font-syne">
               Inquiry Successfully Received!
             </h3>
             <p className="text-slate-300 text-sm max-w-md mx-auto mb-6">
-              Thank you, <strong className="text-white">{name || 'Client'}</strong>. An ESS Senior Solutions Engineer will review your requirements for <strong className="text-cyan-300">{propertyType}</strong> and reach out shortly.
+              Thank you, <strong className="text-white">{name || 'Client'}</strong>. An ESS Senior Solutions Engineer will review your requirements for <strong className="text-lime-300">{propertyType}</strong> and reach out shortly.
             </p>
             <div className="flex items-center justify-center gap-3">
               <button
@@ -264,7 +264,7 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
                   setSubmitted(false);
                   onClose();
                 }}
-                className="btn-primary text-xs py-2.5 px-6"
+                className="btn-primary text-xs py-2.5 px-6 cursor-pointer"
               >
                 Close & Return
               </button>

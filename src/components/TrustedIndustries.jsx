@@ -27,19 +27,19 @@ export default function TrustedIndustries({ onOpenPlanner }) {
   const IconComponent = iconsMap[selectedIndustry.id] || Building2;
 
   return (
-    <section id="industries" className="py-24 relative overflow-hidden bg-[#070b12] border-t border-b border-white/5 z-10">
+    <section id="industries" className="py-24 relative overflow-hidden bg-[#060c08] border-t border-b border-white/5 z-10">
       <div className="container-custom relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="glass-badge">
-              <Layers className="w-3.5 h-3.5 text-cyan-400" />
+              <Layers className="w-3.5 h-3.5 text-lime-400" />
               <span>BUILT FOR EVERY SPACE</span>
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Trusted by Homes, <span className="text-gradient-cyan">Businesses & Industries</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 font-syne">
+            Trusted by Homes, <span className="text-gradient-animated-lime">Businesses & Industries</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-300">
             Technology designed for the way you live and work. We engineer custom automation, high-speed networks, and perimeter security across diverse architectural environments.
@@ -58,11 +58,11 @@ export default function TrustedIndustries({ onOpenPlanner }) {
                 onClick={() => setActiveTab(ind.id)}
                 className={`cursor-pointer flex items-center gap-2.5 px-5 py-3 rounded-xl font-heading text-sm font-semibold transition-all select-none ${
                   isActive
-                    ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/30 border-2 border-cyan-400 text-cyan-200 shadow-lg shadow-cyan-500/25'
+                    ? 'bg-gradient-to-r from-emerald-500/30 to-lime-500/30 border-2 border-lime-400 text-lime-200 shadow-lg shadow-lime-500/25'
                     : 'bg-white/[0.04] border border-white/10 text-slate-300 hover:text-white hover:bg-white/[0.08]'
                 }`}
               >
-                <TabIcon className={`w-4 h-4 ${isActive ? 'text-cyan-400' : 'text-slate-400'}`} />
+                <TabIcon className={`w-4 h-4 ${isActive ? 'text-lime-400' : 'text-slate-400'}`} />
                 <span>{ind.title.split('&')[0]}</span>
               </button>
             );
@@ -86,8 +86,8 @@ export default function TrustedIndustries({ onOpenPlanner }) {
               
               {/* Image Badges */}
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1.5 rounded-lg bg-black/70 backdrop-blur-md border border-white/15 text-xs font-mono text-cyan-300 font-semibold flex items-center gap-1.5">
-                  <IconComponent className="w-4 h-4 text-cyan-400" />
+                <span className="px-3 py-1.5 rounded-lg bg-black/70 backdrop-blur-md border border-lime-500/30 text-xs font-mono text-lime-300 font-semibold flex items-center gap-1.5">
+                  <IconComponent className="w-4 h-4 text-lime-400" />
                   {selectedIndustry.badge}
                 </span>
               </div>
@@ -102,10 +102,10 @@ export default function TrustedIndustries({ onOpenPlanner }) {
             {/* Content Column */}
             <div className="lg:col-span-6 flex flex-col gap-5">
               <div>
-                <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">
+                <span className="text-xs font-mono text-lime-400 uppercase tracking-wider font-semibold">
                   {selectedIndustry.subtitle}
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mt-1">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mt-1 font-syne">
                   {selectedIndustry.title}
                 </h3>
               </div>
@@ -118,7 +118,7 @@ export default function TrustedIndustries({ onOpenPlanner }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 {selectedIndustry.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-lime-400 shrink-0 mt-0.5" />
                     <span className="text-xs text-slate-200 font-medium leading-tight">
                       {feature}
                     </span>
