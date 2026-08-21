@@ -115,72 +115,140 @@ export const INDUSTRIES_DATA = [
 
 export const SOLUTIONS_DATA = [
   {
-    id: "smart-home",
-    title: "Home Automation",
-    tag: "Smart Living",
-    iconName: "Home",
-    badgeColor: "cyan",
-    heroImage: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=80",
-    shortDesc: "Transform your home into an intuitive living space where lighting, climate, curtains, and audio respond effortlessly to your daily routine.",
+    id: "network-infrastructure",
+    title: "Network Infrastructure",
+    category: "networking",
+    tag: "10Gbps Fiber & Wi-Fi 7",
+    iconName: "Network",
+    heroImage: "/sol_network.jpg",
+    shortDesc: "Enterprise Gigabit backbones, single-mode fiber splicing, certified Cat6A/7 structured cabling, and zero-drop mesh Wi-Fi.",
+    badge: "10G FIBER & WI-FI",
     subcategories: [
-      { name: "Lighting Automation", desc: "Scene control, dimming, RGB ambient glows, motion-triggered walkways, and schedule timers." },
-      { name: "Smart Door Locks", desc: "3D Face ID, fingerprint scanner, anti-peep PIN, RFID card, physical backup key, and remote mobile unlock." },
-      { name: "Curtain & Blind Automation", desc: "Whisper-quiet motorized tracks synced to sunrise, sunset, or cinema modes." },
-      { name: "Fan & AC Climate Control", desc: "Automated temperature regulations and smart infrared controllers for all brands." },
-      { name: "Scene Presets", desc: "One-touch presets: 'Good Morning', 'Cinema Time', 'Party Mode', 'Away & Secure'." }
+      { name: "Structured Data Cabling", desc: "Fluke-tested Cat6A / Cat7 copper cabling with precision server rack management." },
+      { name: "Fiber Optic Backbone", desc: "Single-mode & multi-mode fusion splicing for high-speed inter-building campus links." },
+      { name: "Enterprise Wi-Fi 7 / 6E", desc: "Seamless zero-drop roaming across large multi-floor villas, hotels, and offices." },
+      { name: "Managed Layer-3 Switches", desc: "VLAN IoT isolation, PoE+ delivery, and redundant gateway failover protection." }
     ],
-    specs: ["Zigbee 3.0 / Matter / Wi-Fi Compatible", "Apple HomeKit, Google Home & Alexa Support", "Touchscreen Glass Wall Panels", "Full Offline Mesh Capability"]
+    specs: ["10Gbps SFP+ Fiber Uplinks", "VLAN IoT Security Segregation", "Fluke DSX-8000 Certified", "Zero-Drop Roaming 802.11be"]
   },
   {
-    id: "security",
-    title: "Intelligent Security",
-    tag: "Active Protection",
-    iconName: "ShieldCheck",
-    badgeColor: "rose",
-    heroImage: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1000&q=80",
-    shortDesc: "Next-generation security that does not just record what happened, but actively detects intrusions and responds in milliseconds.",
+    id: "cctv-surveillance",
+    title: "CCTV Surveillance",
+    category: "security",
+    tag: "AI 4K & ColorVu",
+    iconName: "Camera",
+    heroImage: "/cctv_surveillance.jpg",
+    shortDesc: "Next-gen 4K AI video surveillance featuring intelligent human & vehicle classification, full-color night vision, and active deterrence.",
+    badge: "24/7 AI NVR",
     subcategories: [
-      { name: "4K AI CCTV Surveillance", desc: "Smart human & vehicle classification, full-color night vision, and tamper detection." },
-      { name: "Intrusion Alarm System", desc: "Magnetic door sensors, glass-break detectors, dual-tech PIR motion, and external 110dB siren." },
-      { name: "Video Door Phone (VDP)", desc: "1080p wide-angle camera, two-way crystal audio, digital chime, and remote phone answer." },
-      { name: "Access Control Systems", desc: "Biometric attendance, magnetic electromagnetic locks, multi-door controllers." },
-      { name: "Smart Remote Monitoring", desc: "Real-time HD feeds and instant emergency push alerts directly to your smartphone." }
+      { name: "4K ColorVu AI Cameras", desc: "Crisp daylight color clarity even in pitch black darkness with zero infrared grain." },
+      { name: "Smart Human & Vehicle Filtering", desc: "Zero false alarm filtering ignores pets, rain, and swaying trees." },
+      { name: "Perimeter Virtual Tripwires", desc: "Instant audio alarm and strobe flash when restricted boundary is crossed." },
+      { name: "Encrypted Cloud & NVR Vault", desc: "30-90 days continuous recording with encrypted remote smartphone access." }
     ],
-    specs: ["AI Facial & License Plate Recognition", "Cloud & On-Premises NVR 30-Day Storage", "Zero False Alarm Filtering", "Cellular SIM Backup Fallback"]
+    specs: ["3840x2160 4K UHD Resolution", "H.265+ Smart Codec Compression", "IP67 Weatherproof Vandal Resistance", "Two-Way Audio Talkback"]
+  },
+  {
+    id: "intrusion-alarm",
+    title: "Intrusion Alarm Systems",
+    category: "security",
+    tag: "110dB Active Deterrence",
+    iconName: "ShieldAlert",
+    heroImage: "/sol_alarm.jpg",
+    shortDesc: "Military-grade wireless intrusion detection with magnetic door contacts, glass-break sensors, dual-tech PIRs, and 110dB sirens.",
+    badge: "INSTANT DETECT",
+    subcategories: [
+      { name: "Wireless Door & Window Contacts", desc: "Sub-second breach detection on all perimeter doors, french windows, and skylights." },
+      { name: "Dual-Tech Pet-Immune PIRs", desc: "Infrared and microwave motion sensors that eliminate false triggers from pets." },
+      { name: "110dB External Strobe Siren", desc: "Blaring acoustic deterrent and pulsing strobe that immediately repels intruders." },
+      { name: "Dual GSM & Wi-Fi Backups", desc: "Uninterrupted cellular telemetry communication even during internet or power blackouts." }
+    ],
+    specs: ["Sub-200ms Threat Response", "868MHz Encrypted Jeweller Radio", "5-Year Sensor Battery Life", "Cellular 4G SIM Fallback"]
+  },
+  {
+    id: "smart-lighting",
+    title: "Smart Lighting Automation",
+    category: "automation",
+    tag: "Circadian & DALI / RGB",
+    iconName: "Lightbulb",
+    heroImage: "/sol_lighting.jpg",
+    shortDesc: "Architectural lighting control that synchronizes with natural sunlight, mood presets, motion-lit pathways, and touch glass smart switches.",
+    badge: "CIRCADIAN & SCENES",
+    subcategories: [
+      { name: "Circadian Rhythm Tuning", desc: "Warm 2700K sunset tones to energized 5000K daylight transitions automatically." },
+      { name: "Architectural Scene Keypads", desc: "Custom laser-engraved luxury glass wall touch switches and dimmer plates." },
+      { name: "RGB Ambient Mood Glowing", desc: "Dynamic cove lighting and accent strips synced to music, movie, or dinner modes." },
+      { name: "Occupancy Walkway Sensors", desc: "Gentle midnight pathway lighting activating without blinding high-intensity lights." }
+    ],
+    specs: ["DALI-2 / 0-10V / Phase Dimming", "Apple Home, Alexa & Google Home", "Zigbee 3.0 & Matter Compatible", "No Neutral Wire Options Available"]
+  },
+  {
+    id: "smart-locks",
+    title: "Smart Door Locks",
+    category: "access",
+    tag: "3D Face ID & Fingerprint",
+    iconName: "Lock",
+    heroImage: "/sol_locks.jpg",
+    shortDesc: "Keyless biometric smart deadbolts engineered with 3D facial recognition, 0.3s optical fingerprint scanning, anti-peep PINs, and remote app unlock.",
+    badge: "KEYLESS LUXURY",
+    subcategories: [
+      { name: "3D Infrared Facial Unlock", desc: "Contactless biometric recognition even in total darkness or while wearing glasses." },
+      { name: "Live Semiconductor Fingerprint", desc: "0.3s ultra-fast recognition on ergonomic handle with fake-finger prevention." },
+      { name: "Anti-Peep Scramble PIN", desc: "Enter random digits before/after real PIN code to prevent onlookers from copying." },
+      { name: "Temporary OTP Guest Access", desc: "Generate timed one-time access codes for housekeeping, guests, or deliveries." }
+    ],
+    specs: ["C-Class High-Security Lock Cylinder", "Built-In Wide Angle HD Camera", "Emergency USB-C Power Port", "Anti-Tamper Pry Alarm Sensor"]
   },
   {
     id: "gate-automation",
-    title: "Gate & Access Automation",
-    tag: "Seamless Entry",
-    iconName: "Lock",
-    badgeColor: "amber",
-    heroImage: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=80",
-    shortDesc: "Commercial and residential motorized gate systems designed for heavy cycles, smooth whisper motion, and contactless vehicle access.",
+    title: "Gate Automation",
+    category: "access",
+    tag: "Up to 2,000kg Motors",
+    iconName: "ShieldCheck",
+    heroImage: "/main_gate_closed.jpg",
+    shortDesc: "Heavy-duty electro-mechanical and hydraulic motorized systems for residential sliding gates, swing rams, and telescopic gates.",
+    badge: "HEAVY DUTY MOTORS",
     subcategories: [
-      { name: "Sliding Gate Automation", desc: "High-torque oil-bath motors supporting gates up to 2,000kg with soft-start & soft-stop." },
-      { name: "Swing Gate Actuators", desc: "Sleek electro-mechanical and hydraulic rams with obstacle detection sensors." },
-      { name: "Automatic Boom Barriers", desc: "Fast 1.5s to 3s opening speed for high-traffic apartment & commercial entry points." },
-      { name: "RFID & FASTag Vehicle Access", desc: "Long-range hands-free gate opening for authorized resident and corporate vehicles." },
-      { name: "Smartphone & Remote Control", desc: "Open gate via mobile app from anywhere in the world or encrypted 433MHz remotes." }
+      { name: "Oil-Bath Sliding Gate Motors", desc: "Silent operation with soft-start and soft-stop for gates up to 2,000 kg." },
+      { name: "Heavy Hydraulic Swing Rams", desc: "Self-locking motorized actuators engineered for high wind load resistance." },
+      { name: "Infrared Anti-Crush Safety", desc: "Dual safety photocells instantly reverse gate motion if vehicle or person is in path." },
+      { name: "Inverter Battery Fallback", desc: "Seamless operation during power cuts with emergency mechanical key release." }
     ],
-    specs: ["Battery Backup During Power Cuts", "Infrared Safety Anti-Crush Sensors", "Manual Key Release Mechanism", "IP67 Weatherproof Motors"]
+    specs: ["IP67 Weatherproof Rating", "100% Duty Cycle Rated", "Soft Start / Slow Down Ramping", "Encrypted 433/868MHz Rolling Code"]
   },
   {
-    id: "networking",
-    title: "Enterprise Networking",
-    tag: "Connected Backbone",
-    iconName: "Network",
-    badgeColor: "blue",
-    heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80",
-    shortDesc: "High-performance network infrastructure built with enterprise-grade Wi-Fi, 10Gbps fiber backbones, and structured cabling.",
+    id: "vehicle-access",
+    title: "Vehicle Access & Parking",
+    category: "access",
+    tag: "FASTag & Boom Barriers",
+    iconName: "Radio",
+    heroImage: "/sol_barriers.jpg",
+    shortDesc: "Contactless long-range FASTag RFID vehicle access, 1.5s high-speed LED boom barriers, automatic number plate recognition (ANPR), and parking systems.",
+    badge: "FASTAG & ANPR",
     subcategories: [
-      { name: "Enterprise Wi-Fi 7 / 6E", desc: "Seamless zero-drop roaming across large villas, hotels, and multiple office floors." },
-      { name: "Structured Cabling (Cat6A/Cat7)", desc: "Fluke-tested certified copper data cabling, organized server racks, and patch panels." },
-      { name: "Fiber Optic Backbone", desc: "Single-mode and multi-mode fiber fusion splicing for high-speed inter-building links." },
-      { name: "Managed Switches & Firewalls", desc: "VLAN segregation for IoT devices, QoS bandwidth prioritization, and intrusion prevention." },
-      { name: "Network Infrastructure Audit", desc: "Wi-Fi heatmap site surveys, signal optimization, and 24/7 network uptime monitoring." }
+      { name: "1.5s High-Speed Boom Barriers", desc: "Brushless DC motor with LED illuminated barrier arms for round-the-clock traffic." },
+      { name: "Long-Range FASTag RFID Readers", desc: "Hands-free automated gate opening from 6 to 12 meters for registered residents." },
+      { name: "ANPR License Plate Cameras", desc: "AI OCR recognition logs vehicle number plates and grants instantaneous entry." },
+      { name: "Anti-Tailgating Loop Detectors", desc: "Magnetic ground inductive loops prevent unauthorized vehicles from slipping behind." }
     ],
-    specs: ["Multi-Gigabit Throughput Support", "Dedicated Guest & IoT Isolated VLANs", "PoE+ / PoE++ High-Power Delivery", "Tier-1 Hardware Integration"]
+    specs: ["1.5s to 3s Adjustable Speed", "5 Million Cycles MTBF Rating", "Integrated Traffic LED Indicator", "Crash-Proof Breakaway Arm Bracket"]
+  },
+  {
+    id: "access-control",
+    title: "Time Attendance & Access",
+    category: "security",
+    tag: "Biometric & EM Locks",
+    iconName: "UserCheck",
+    heroImage: "/sol_access.jpg",
+    shortDesc: "Touchless facial recognition terminals, 600lbs electromagnetic locks, motorized turnstiles, and unified attendance payroll software.",
+    badge: "ENTERPRISE ACCESS",
+    subcategories: [
+      { name: "Touchless Facial Attendance", desc: "Deep learning AI terminal with fever screening, mask detection, and 0.2s matching." },
+      { name: "600lbs Magnetic EM Locks", desc: "Fail-safe electromagnetic lock systems with door status sensor monitoring." },
+      { name: "Motorized Flap Barrier Turnstiles", desc: "Brushed stainless steel pedestrian turnstiles for corporate and clubhouse lobbies." },
+      { name: "Multi-Door Central Controller", desc: "TCP/IP networked access controller supporting hundreds of doors across buildings." }
+    ],
+    specs: ["50,000 Face Capacity", "Anti-Spoofing Dual Bionic Cameras", "Wiegand & OSDP Protocol Support", "Automated Cloud Payroll Sync"]
   }
 ];
 
