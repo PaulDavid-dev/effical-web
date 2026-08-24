@@ -18,9 +18,9 @@ import {
   ArrowRight, 
   CheckCircle2 
 } from 'lucide-react';
-import { SITE_INFO } from '../data/siteContent';
+import { BRANDS } from '../data/siteContent';
 
-export default function SmartPlannerModal({ isOpen, onClose }) {
+export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
   const [propertyType, setPropertyType] = useState('Luxury Villa');
   const [selectedModules, setSelectedModules] = useState([
     'Smart Lighting & Scenes',
@@ -32,6 +32,8 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
   const [phone, setPhone] = useState('');
   const [city, setCity] = useState('');
   const [submitted, setSubmitted] = useState(false);
+
+  const activeBrand = BRANDS[brand] || BRANDS.ess;
 
   if (!isOpen) return null;
 
@@ -67,8 +69,8 @@ export default function SmartPlannerModal({ isOpen, onClose }) {
   };
 
   const handleWhatsAppSubmit = () => {
-    const text = `Hi ESS Smart Solutions,\n\nI would like to book a Free Site Visit / System Proposal:\n- Name: ${name || 'Prospective Client'}\n- City/Location: ${city || 'Tamil Nadu'}\n- Property Type: ${propertyType}\n- Construction Stage: ${propertyStage}\n- Required Modules: ${selectedModules.join(', ')}\n- Phone: ${phone || 'Provided via chat'}\n\nPlease contact me with recommendations.`;
-    window.open(`https://wa.me/${SITE_INFO.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
+    const text = `Hi ${activeBrand.shortName} (${activeBrand.fullName}),\n\nI would like to book a Free Site Visit / System Proposal:\n- Name: ${name || 'Prospective Client'}\n- City/Location: ${city || 'Tamil Nadu'}\n- Property Type: ${propertyType}\n- Construction Stage: ${propertyStage}\n- Required Modules: ${selectedModules.join(', ')}\n- Phone: ${phone || 'Provided via chat'}\n\nPlease contact me with recommendations.`;
+    window.open(`https://wa.me/${activeBrand.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
     setSubmitted(true);
   };
 

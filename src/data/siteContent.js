@@ -1,18 +1,64 @@
-// ESS — EFFICAL SMART SOLUTIONS DATA REPOSITORY
+// ESS & ET — BRAND DEFINITIONS & DATA REPOSITORY
 
-export const SITE_INFO = {
-  name: "ESS — EFFICAL SMART SOLUTIONS",
-  shortName: "ESS",
-  tagline: "Smart Living. Intelligent Security. Connected Spaces.",
-  phone: "+91 98400 12345",
-  whatsappNumber: "919840012345",
-  email: "contact@efficalsmart.com",
-  supportEmail: "support@efficalsmart.com",
-  location: "Tamil Nadu & South India",
-  address: "ESS Experience Center, Tech Corridor, Tamil Nadu, India",
-  workingHours: "Mon - Sat: 9:00 AM – 8:00 PM | 24×7 Emergency Support",
-  copyright: `© ${new Date().getFullYear()} EFFICAL SMART SOLUTIONS (ESS). All Rights Reserved.`
+export const BRANDS = {
+  ess: {
+    id: "ess",
+    name: "ESS — EFFICAL SMART SOLUTIONS",
+    shortName: "ESS",
+    fullName: "Effical Smart Solutions",
+    badgeText: "Main Site",
+    tagline: "Smart Living. Intelligent Security. Connected Spaces.",
+    subTaglines: ["SMART LIVING", "INTELLIGENT SECURITY"],
+    phone: "+91 79049 83794",
+    whatsappNumber: "917904983794",
+    email: "sales@effficalsmartsoultions.com",
+    supportEmail: "sales@effficalsmartsoultions.com",
+    location: "Coimbatore",
+    address: "#43/3, Arasu Paniyalar Nagar, Vilankurichi, Coimbatore- 641035",
+    workingHours: "Mon - Sat: 9:00 AM – 8:00 PM | 24×7 Emergency Support",
+    socials: {
+      instagram: "https://www.instagram.com/efficalsmartsolutions?igsi=MTdrdWI4eDJpZW5kaA%3D%3D&utm_source=qr",
+      facebook: null,
+      whatsapp: "https://wa.me/917904983794"
+    },
+    footerBio: {
+      greeting: "Warm greetings from",
+      company: "Effical Smart Solutions",
+      description: "South India's premier system integrators for Luxury Home Automation, AI 4K Security Surveillance, Automated Motorized Gates, and Enterprise Gigabit Networking."
+    },
+    copyright: `© ${new Date().getFullYear()} EFFICAL SMART SOLUTIONS (ESS). All Rights Reserved.`
+  },
+  et: {
+    id: "et",
+    name: "ET — EFFICAL TECHNOLOGIES",
+    shortName: "ET",
+    fullName: "Effical Technologies",
+    badgeText: "Sub Division",
+    tagline: "Smart Home Security & Automation Solutions",
+    subTaglines: ["SECURITY ALARMS", "HOME AUTOMATION"],
+    phone: "+91 79049 83794",
+    whatsappNumber: "917904983794",
+    email: "sales@effficalsmartsoultions.com",
+    supportEmail: "sales@effficalsmartsoultions.com",
+    location: "Coimbatore",
+    address: "#43/3, Arasu Paniyalar Nagar, Vilankurichi, Coimbatore- 641035",
+    workingHours: "Mon - Sat: 9:00 AM – 8:00 PM | 24×7 Emergency Support",
+    socials: {
+      instagram: "https://www.instagram.com/efficaltechnologies?igsh=MXV2aWdmN3gzZXlpdg%3D%3D&utm_source=qr",
+      facebook: "https://www.facebook.com/share/1H46VabwU6/?mibextid=wwXIfr",
+      whatsapp: "https://wa.me/917904983794"
+    },
+    footerBio: {
+      greeting: "Warm greetings from",
+      company: "Effical Technologies",
+      description: "We specialize in Smart Home Security & Automation Solutions designed for comfort, safety, and peace of mind 🏠🔐"
+    },
+    copyright: `© ${new Date().getFullYear()} EFFICAL TECHNOLOGIES (ET). All Rights Reserved.`
+  }
 };
+
+export const SITE_INFO = BRANDS.ess;
+
 
 export const NAV_LINKS = [
   { label: "Solutions", href: "#solutions" },

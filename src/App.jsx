@@ -20,6 +20,7 @@ import SmartPlannerModal from './components/SmartPlannerModal';
 
 export default function App() {
   const [plannerOpen, setPlannerOpen] = useState(false);
+  const [brand, setBrand] = useState('ess'); // 'ess' | 'et'
 
   const openPlanner = () => setPlannerOpen(true);
   const closePlanner = () => setPlannerOpen(false);
@@ -27,31 +28,37 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#040806] text-[#f8fafc] relative selection:bg-emerald-500/30 selection:text-lime-200">
 
-      {/* Top Fixed Floating Navigation with Scroll Progress Bar */}
-      <Navbar onOpenPlanner={openPlanner} />
+      {/* Top Fixed Floating Navigation with Scroll Progress Bar & Brand Switcher */}
+      <Navbar 
+        brand={brand} 
+        onSelectBrand={setBrand} 
+        onOpenPlanner={openPlanner} 
+      />
 
       {/* Main Single-Page App Content Sections */}
       <main>
         {/* 1. Hero Section with Interactive Live Smart Control Panel */}
-        <Hero onOpenPlanner={openPlanner} />
-
-        {/* 2. Trusted By Homes & Businesses (Industries) */}
-        <TrustedIndustries onOpenPlanner={openPlanner} />
-
-        {/* 3. Luxury Glass Touch Switches & 3-Protocol Architecture */}
-        <SmartTouchSwitchSection onOpenPlanner={openPlanner} />
+        <Hero 
+          brand={brand}
+          onOpenPlanner={openPlanner} 
+        />
 
         {/* 4. Solutions Section (Smart Home, AI CCTV, Gate Automation, Networking) */}
         <SolutionsSection onOpenPlanner={openPlanner} />
 
+        {/* 3. Luxury Glass Touch Switches & 3-Protocol Architecture */}
+        <SmartTouchSwitchSection onOpenPlanner={openPlanner} />
+
+        {/* 2. Trusted By Homes & Businesses (Industries) */}
+        <TrustedIndustries onOpenPlanner={openPlanner} />
         {/* 5. One Smart Ecosystem Interactive Scene Simulator */}
-        <EcosystemSimulator onOpenPlanner={openPlanner} />
+        {/* <EcosystemSimulator onOpenPlanner={openPlanner} /> */}
 
         {/* 6. Security That Reacts (Live Threat Response Simulation) */}
         <SecurityReacts onOpenPlanner={openPlanner} />
 
         {/* 7. Smart Energy Intelligence & Solar Telemetry Dashboard */}
-        <EnergyTelemetrySection onOpenPlanner={openPlanner} />
+        {/* <EnergyTelemetrySection onOpenPlanner={openPlanner} /> */}
 
         {/* 8. Technology Partners & Brand Marquee */}
         <TechPartners />
@@ -60,13 +67,13 @@ export default function App() {
         <FeaturedProjects onOpenPlanner={openPlanner} />
 
         {/* 10. Why ESS (5 Pillars & Turnkey vs Generic Comparison) */}
-        <WhyESS onOpenPlanner={openPlanner} />
+        {/* <WhyESS onOpenPlanner={openPlanner} /> */}
 
         {/* 11. How We Work (5-Step Journey from Idea to Installation) */}
         <HowWeWork onOpenPlanner={openPlanner} />
 
         {/* 12. Client Testimonials & Experiences */}
-        <Testimonials />
+        {/* <Testimonials /> */}
 
         {/* 13. Frequently Asked Questions */}
         {/* <FAQSection /> */}
@@ -75,18 +82,24 @@ export default function App() {
         <FinalCTA onOpenPlanner={openPlanner} />
       </main>
 
-      {/* Complete Footer */}
-      <Footer onOpenPlanner={openPlanner} />
+      {/* Complete Footer with dynamic brand socials and switch option */}
+      <Footer 
+        brand={brand}
+        onSelectBrand={setBrand}
+        onOpenPlanner={openPlanner} 
+      />
 
       {/* Floating Quick Action Widget (WhatsApp, Call, Scroll Top) */}
-      <FloatingActions />
+      <FloatingActions brand={brand} />
 
       {/* Interactive Space Planner & Consultation Booking Modal */}
       <SmartPlannerModal
         isOpen={plannerOpen}
         onClose={closePlanner}
+        brand={brand}
       />
 
     </div>
   );
 }
+
