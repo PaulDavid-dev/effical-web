@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ShieldAlert, 
-  Bell, 
-  Lightbulb, 
-  Smartphone, 
-  Volume2, 
-  RotateCcw, 
-  AlertTriangle, 
-  CheckCircle2, 
-  Radio, 
+import {
+  ShieldAlert,
+  Bell,
+  Lightbulb,
+  Smartphone,
+  Volume2,
+  RotateCcw,
+  AlertTriangle,
+  CheckCircle2,
+  Radio,
   ArrowRight,
   ShieldCheck
 } from 'lucide-react';
@@ -74,12 +74,12 @@ export default function SecurityReacts({ onOpenPlanner }) {
       `}</style>
 
       <section id="security-reacts" className="py-24 relative overflow-hidden bg-[#040806] z-10">
-        
+
         {/* Background glow */}
         <div className={`absolute inset-0 transition-opacity duration-700 pointer-events-none ${threatSimulated ? 'bg-rose-950/20' : 'bg-transparent'}`}></div>
 
         <div className="container-custom relative z-10">
-          
+
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-2 mb-3">
@@ -101,7 +101,7 @@ export default function SecurityReacts({ onOpenPlanner }) {
 
           {/* Interactive Threat Simulator Container */}
           <div className={`glass-card p-6 sm:p-10 max-w-5xl mx-auto transition-all duration-500 ${threatSimulated ? 'alert-active' : 'border-white/10'}`}>
-            
+
             {/* Top Trigger Action Bar */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 mb-8 border-b border-white/10 relative z-20">
               <div className="flex items-center gap-3">
@@ -186,13 +186,12 @@ export default function SecurityReacts({ onOpenPlanner }) {
 
             {/* 3-Step Reaction Sequence Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              
+
               {/* Step 1: Intrusion Detected */}
-              <div className={`p-5 rounded-2xl border transition-all duration-500 ${
-                stepIndex >= 1
+              <div className={`p-5 rounded-2xl border transition-all duration-500 ${stepIndex >= 1
                   ? 'bg-rose-500/15 border-rose-500/50 shadow-lg shadow-rose-500/10'
                   : 'bg-white/[0.02] border-white/5 opacity-60'
-              }`}>
+                }`}>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-mono px-2.5 py-1 rounded bg-black/40 text-rose-300 font-bold">
                     PHASE 01 (0ms)
@@ -201,20 +200,19 @@ export default function SecurityReacts({ onOpenPlanner }) {
                 </div>
                 <h4 className="text-base font-bold text-white mb-1">Intrusion Sensor Tripped</h4>
                 <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                  Magnetic contact or perimeter AI tripwire registers unauthorized breach attempt at entrance.
+                  Magnetic contact or perimeter tripwire registers unauthorized breach attempt at entrance.
                 </p>
                 <div className="text-[11px] font-mono text-rose-400 font-semibold flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-rose-400"></span>
-                  <span>{stepIndex >= 1 ? 'AI HUMAN DETECTED' : 'STANDBY'}</span>
+                  <span>{stepIndex >= 1 ? 'HUMAN DETECTED' : 'STANDBY'}</span>
                 </div>
               </div>
 
               {/* Step 2: 110dB Siren + Floodlights */}
-              <div className={`p-5 rounded-2xl border transition-all duration-500 ${
-                stepIndex >= 2
+              <div className={`p-5 rounded-2xl border transition-all duration-500 ${stepIndex >= 2
                   ? 'bg-lime-500/15 border-lime-500/50 shadow-lg shadow-lime-500/10'
                   : 'bg-white/[0.02] border-white/5 opacity-60'
-              }`}>
+                }`}>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-mono px-2.5 py-1 rounded bg-black/40 text-lime-300 font-bold">
                     PHASE 02 (150ms)
@@ -232,11 +230,10 @@ export default function SecurityReacts({ onOpenPlanner }) {
               </div>
 
               {/* Step 3: Instant Smartphone Alert */}
-              <div className={`p-5 rounded-2xl border transition-all duration-500 ${
-                stepIndex >= 4
+              <div className={`p-5 rounded-2xl border transition-all duration-500 ${stepIndex >= 4
                   ? 'bg-emerald-500/15 border-emerald-500/50 shadow-lg shadow-emerald-500/10'
                   : 'bg-white/[0.02] border-white/5 opacity-60'
-              }`}>
+                }`}>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-mono px-2.5 py-1 rounded bg-black/40 text-emerald-300 font-bold">
                     PHASE 03 (300ms)
@@ -245,7 +242,7 @@ export default function SecurityReacts({ onOpenPlanner }) {
                 </div>
                 <h4 className="text-base font-bold text-white mb-1">Instant Phone Push Alert</h4>
                 <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                  Push notification with 4K snapshot and live CCTV feed sent to all family/security phones worldwide.
+                  Push notification with snapshot and live CCTV feed sent to all family/security phones worldwide.
                 </p>
                 <div className="text-[11px] font-mono text-emerald-300 font-semibold flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -274,7 +271,7 @@ export default function SecurityReacts({ onOpenPlanner }) {
                 </div>
 
                 <div className="flex items-center gap-2 shrink-0">
-                  <button 
+                  <button
                     type="button"
                     onClick={() => setThreatSimulated(false)}
                     className="cursor-pointer px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-medium text-white border border-white/10"

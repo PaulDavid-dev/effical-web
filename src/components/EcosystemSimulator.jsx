@@ -60,7 +60,7 @@ export default function EcosystemSimulator({ onOpenPlanner }) {
             <span className="text-gradient-animated-lime">Everything Under Control.</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-300">
-            Lights, biometric locks, 4K CCTV, motorized gates, and enterprise Wi-Fi communicating over a single, encrypted high-speed neural network.
+            Lights, biometric locks, CCTV, motorized gates, and enterprise Wi-Fi communicating over a single, encrypted high-speed neural network.
           </p>
         </div>
 

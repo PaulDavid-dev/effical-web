@@ -108,7 +108,7 @@ export default function Hero({ onOpenPlanner }) {
     setTamperAlarmActive(false);
   };
 
-  // Tile 3 Handler: 4K CCTV Surveillance
+  // Tile 3 Handler: CCTV Surveillance
   const handleCctvClick = () => {
     const nextCctv = !cctvPatrolActive;
     setCctvPatrolActive(nextCctv);
@@ -164,7 +164,7 @@ export default function Hero({ onOpenPlanner }) {
         badgeColor: cctvPatrolActive ? 'bg-rose-600 text-white font-bold animate-pulse' : 'bg-slate-700 text-slate-300',
         statusText: cctvAiDeterrence
           ? 'ACTIVE DETERRENCE: 120dB STROBE ENGAGED'
-          : (cctvPatrolActive ? 'AI VEHICLE & TRIPWIRE PATROL: ARMED' : 'CCTV PATROL PAUSED'),
+          : (cctvPatrolActive ? 'VEHICLE & TRIPWIRE PATROL: ARMED' : 'CCTV PATROL PAUSED'),
         statusColor: cctvAiDeterrence ? 'text-amber-400 font-bold' : 'text-emerald-300',
         dotColor: cctvPatrolActive ? 'bg-rose-500 animate-ping' : 'bg-slate-500',
         subTag: 'COLORVU • 30FPS',
@@ -297,7 +297,7 @@ export default function Hero({ onOpenPlanner }) {
 
               {/* Tagline / Subtitle */}
               <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-light leading-relaxed">
-                Where luxury meets intelligent automation. We engineer custom <strong className="text-white font-semibold hover:text-lime-400 transition-colors">Home Automation</strong>, <strong className="text-white font-semibold hover:text-emerald-400 transition-colors">AI CCTV Security</strong>, <strong className="text-white font-semibold hover:text-teal-400 transition-colors">Video Intercoms</strong>, <strong className="text-white font-semibold hover:text-lime-400 transition-colors">Motorized Gates</strong>, and <strong className="text-white font-semibold hover:text-teal-400 transition-colors">Enterprise Gigabit Networking</strong> into one unified, calm space. One team, one system, from gate to bedroom.
+                Where luxury meets intelligent automation. We engineer custom <strong className="text-white font-semibold hover:text-lime-400 transition-colors">Home Automation</strong>, <strong className="text-white font-semibold hover:text-emerald-400 transition-colors">CCTV Security</strong>, <strong className="text-white font-semibold hover:text-teal-400 transition-colors">Video Intercoms</strong>, <strong className="text-white font-semibold hover:text-lime-400 transition-colors">Motorized Gates</strong>, and <strong className="text-white font-semibold hover:text-teal-400 transition-colors">Enterprise Gigabit Networking</strong> into one unified, calm space. One team, one system, from gate to bedroom.
               </p>
 
               {/* Feature Pills */}
@@ -337,7 +337,7 @@ export default function Hero({ onOpenPlanner }) {
               </div>
 
               {/* Verified Scale Metrics with Animated Glow Numbers */}
-              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 max-w-lg">
+              {/* <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 max-w-lg">
                 <div>
                   <p className="text-2xl md:text-3xl font-extrabold text-white font-syne text-glow-emerald">450+</p>
                   <p className="text-[11px] text-slate-400 uppercase tracking-wider font-mono">Smart Homes</p>
@@ -350,7 +350,7 @@ export default function Hero({ onOpenPlanner }) {
                   <p className="text-2xl md:text-3xl font-extrabold text-emerald-400 font-syne text-glow-emerald">24/7</p>
                   <p className="text-[11px] text-slate-400 uppercase tracking-wider font-mono">Dedicated SLA</p>
                 </div>
-              </div>
+              </div> */}
 
             </div>
 
@@ -437,7 +437,7 @@ export default function Hero({ onOpenPlanner }) {
                     )}
                   </button>
 
-                  {/* Tile 3: 4K CCTV Surveillance */}
+                  {/* Tile 3: CCTV Surveillance */}
                   <button
                     type="button"
                     onClick={handleCctvClick}
@@ -544,7 +544,7 @@ export default function Hero({ onOpenPlanner }) {
 
                 </div>
 
-                {/* === DYNAMIC 4K AI CAMERA FEED (Changes dynamically based on clicked tile) === */}
+                {/* === DYNAMIC CAMERA FEED (Changes dynamically based on clicked tile) === */}
                 <div className={`relative rounded-2xl overflow-hidden border transition-all duration-500 bg-black/90 mb-3 ${tamperAlarmActive
                   ? 'border-rose-500 shadow-2xl shadow-rose-600/40 ring-2 ring-rose-500/50'
                   : 'border-emerald-500/20'
@@ -569,7 +569,7 @@ export default function Hero({ onOpenPlanner }) {
                     {/* Gradient shading for clear text visibility */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/70 pointer-events-none"></div>
 
-                    {/* === SPECIAL RECORDER EFFECTS FOR 4K CCTV SURVEILLANCE === */}
+                    {/* === SPECIAL RECORDER EFFECTS FOR CCTV SURVEILLANCE === */}
                     {camData.isCctvMode && (
                       <div className="absolute inset-0 pointer-events-none">
                         {/* CCTV Scanlines overlay */}
@@ -586,21 +586,11 @@ export default function Hero({ onOpenPlanner }) {
                           </span>
                         </div>
 
-                        {/* AI Vehicle Bounding Box in Driveway */}
-                        <div className="absolute top-[42%] left-[26%] w-[20%] h-[26%] border border-emerald-400/90 bg-emerald-500/10 rounded-sm">
-                          <span className="absolute -top-3.5 left-0 bg-emerald-500 text-[8px] font-mono font-bold text-slate-950 px-1 py-0.2 rounded-t">
-                            SUV 99.4%
-                          </span>
-                          <div className="w-1.5 h-1.5 border-t-2 border-l-2 border-emerald-400 absolute -top-0.5 -left-0.5"></div>
-                          <div className="w-1.5 h-1.5 border-t-2 border-r-2 border-emerald-400 absolute -top-0.5 -right-0.5"></div>
-                          <div className="w-1.5 h-1.5 border-b-2 border-l-2 border-emerald-400 absolute -bottom-0.5 -left-0.5"></div>
-                          <div className="w-1.5 h-1.5 border-b-2 border-r-2 border-emerald-400 absolute -bottom-0.5 -right-0.5"></div>
-                        </div>
 
-                        {/* AI Tripwire Security line */}
+                        {/* Tripwire Security line */}
                         <div className="absolute bottom-[28%] left-[10%] right-[10%] border-b border-dashed border-lime-400/80 flex items-center justify-between">
                           <span className="text-[7px] font-mono text-lime-300 bg-black/70 px-1 rounded-t">
-                            ● AI TRIPWIRE-01 ARMED
+                            ● TRIPWIRE-01 ARMED
                           </span>
                           <span className="text-[7px] font-mono text-emerald-300 bg-black/70 px-1 rounded-t">
                             8192kbps • H.265+
@@ -648,7 +638,7 @@ export default function Hero({ onOpenPlanner }) {
                           </span>
                         </div>
 
-                        {/* AI Visitor Face Detection Box */}
+                        {/* Visitor Face Detection Box */}
                         <div className="absolute top-[28%] left-[48%] w-[26%] h-[56%] border-2 border-amber-400/90 bg-amber-500/10 rounded-lg animate-pulse">
                           <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-400 text-[8px] font-mono font-bold text-slate-950 px-1.5 py-0.2 rounded whitespace-nowrap">
                             👤 VISITOR: COURIER

@@ -29,25 +29,25 @@ export default function App() {
     <div className="min-h-screen bg-[#040806] text-[#f8fafc] relative selection:bg-emerald-500/30 selection:text-lime-200">
 
       {/* Top Fixed Floating Navigation with Scroll Progress Bar & Brand Switcher */}
-      <Navbar 
-        brand={brand} 
-        onSelectBrand={setBrand} 
-        onOpenPlanner={openPlanner} 
+      <Navbar
+        brand={brand}
+        onSelectBrand={setBrand}
+        onOpenPlanner={openPlanner}
       />
 
       {/* Main Single-Page App Content Sections */}
       <main>
         {/* 1. Hero Section with Interactive Live Smart Control Panel */}
-        <Hero 
+        <Hero
           brand={brand}
-          onOpenPlanner={openPlanner} 
+          onOpenPlanner={openPlanner}
         />
 
-        {/* 4. Solutions Section (Smart Home, AI CCTV, Gate Automation, Networking) */}
+        {/* 4. Solutions Section (Smart Home, CCTV, Gate Automation, Networking) */}
         <SolutionsSection onOpenPlanner={openPlanner} />
 
         {/* 3. Luxury Glass Touch Switches & 3-Protocol Architecture */}
-        <SmartTouchSwitchSection onOpenPlanner={openPlanner} />
+        {/* <SmartTouchSwitchSection onOpenPlanner={openPlanner} /> */}
 
         {/* 2. Trusted By Homes & Businesses (Industries) */}
         <TrustedIndustries onOpenPlanner={openPlanner} />
@@ -55,7 +55,7 @@ export default function App() {
         {/* <EcosystemSimulator onOpenPlanner={openPlanner} /> */}
 
         {/* 6. Security That Reacts (Live Threat Response Simulation) */}
-        <SecurityReacts onOpenPlanner={openPlanner} />
+        {/* <SecurityReacts onOpenPlanner={openPlanner} /> */}
 
         {/* 7. Smart Energy Intelligence & Solar Telemetry Dashboard */}
         {/* <EnergyTelemetrySection onOpenPlanner={openPlanner} /> */}
@@ -83,10 +83,10 @@ export default function App() {
       </main>
 
       {/* Complete Footer with dynamic brand socials and switch option */}
-      <Footer 
+      <Footer
         brand={brand}
         onSelectBrand={setBrand}
-        onOpenPlanner={openPlanner} 
+        onOpenPlanner={openPlanner}
       />
 
       {/* Floating Quick Action Widget (WhatsApp, Call, Scroll Top) */}

@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
-import { 
-  X, 
-  Check, 
-  Home, 
-  Building2, 
-  Hotel, 
-  Factory, 
-  Lightbulb, 
-  Camera, 
-  Lock, 
-  Wifi, 
-  BellRing, 
-  ShieldCheck, 
-  MessageSquare, 
-  Send, 
-  Sparkles, 
-  ArrowRight, 
-  CheckCircle2 
+import {
+  X,
+  Check,
+  Home,
+  Building2,
+  Hotel,
+  Factory,
+  Lightbulb,
+  Camera,
+  Lock,
+  Wifi,
+  BellRing,
+  ShieldCheck,
+  MessageSquare,
+  Send,
+  Sparkles,
+  ArrowRight,
+  CheckCircle2
 } from 'lucide-react';
 import { BRANDS } from '../data/siteContent';
 
@@ -25,7 +25,7 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
   const [selectedModules, setSelectedModules] = useState([
     'Smart Lighting & Scenes',
     'Biometric Smart Locks',
-    '4K AI CCTV Surveillance'
+    'CCTV Surveillance'
   ]);
   const [propertyStage, setPropertyStage] = useState('Under Construction / Electrical Stage');
   const [name, setName] = useState('');
@@ -48,7 +48,7 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
   const modulesList = [
     { name: 'Smart Lighting & Scenes', icon: Lightbulb },
     { name: 'Biometric Smart Locks', icon: Lock },
-    { name: '4K AI CCTV Surveillance', icon: Camera },
+    { name: 'CCTV Surveillance', icon: Camera },
     { name: 'Motorized Gate / Boom Barrier', icon: ShieldCheck },
     { name: 'Enterprise Wi-Fi Mesh', icon: Wifi },
     { name: 'Intrusion Siren Alarm', icon: BellRing }
@@ -81,12 +81,12 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div 
+      <div
         className="glass-panel max-w-2xl w-full p-6 sm:p-8 relative max-h-[92vh] overflow-y-auto border-lime-500/40 bg-[#070e0a]/98"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors cursor-pointer"
         >
@@ -110,7 +110,7 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
             </p>
 
             <form onSubmit={handleDirectSubmit} className="space-y-6">
-              
+
               {/* Step 1: Property Type */}
               <div>
                 <label className="text-xs font-mono uppercase text-lime-400 font-bold block mb-2.5">
@@ -125,11 +125,10 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
                         type="button"
                         key={pt.label}
                         onClick={() => setPropertyType(pt.label)}
-                        className={`p-3 rounded-xl border text-xs font-heading font-semibold flex items-center gap-2 transition-all cursor-pointer ${
-                          isSel 
-                            ? 'bg-lime-500/20 border-lime-400 text-white shadow-md shadow-lime-500/20' 
+                        className={`p-3 rounded-xl border text-xs font-heading font-semibold flex items-center gap-2 transition-all cursor-pointer ${isSel
+                            ? 'bg-lime-500/20 border-lime-400 text-white shadow-md shadow-lime-500/20'
                             : 'bg-white/5 border-white/10 text-slate-400 hover:text-white'
-                        }`}
+                          }`}
                       >
                         <Icon className={`w-4 h-4 ${isSel ? 'text-lime-400' : 'text-slate-500'}`} />
                         <span>{pt.label}</span>
@@ -153,11 +152,10 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
                         type="button"
                         key={mod.name}
                         onClick={() => toggleModule(mod.name)}
-                        className={`p-3 rounded-xl border text-xs font-medium flex items-center justify-between transition-all cursor-pointer ${
-                          isSel
+                        className={`p-3 rounded-xl border text-xs font-medium flex items-center justify-between transition-all cursor-pointer ${isSel
                             ? 'bg-lime-500/15 border-lime-500/60 text-white'
                             : 'bg-white/[0.03] border-white/10 text-slate-400 hover:text-white'
-                        }`}
+                          }`}
                       >
                         <div className="flex items-center gap-2">
                           <Icon className={`w-4 h-4 ${isSel ? 'text-lime-400' : 'text-slate-500'}`} />
@@ -194,7 +192,7 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
                   <label className="text-[11px] font-mono text-slate-400 block mb-1">Your Name</label>
-                  <input 
+                  <input
                     type="text"
                     required
                     placeholder="e.g. Rajesh Kumar"
@@ -205,7 +203,7 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
                 </div>
                 <div>
                   <label className="text-[11px] font-mono text-slate-400 block mb-1">Phone Number</label>
-                  <input 
+                  <input
                     type="tel"
                     required
                     placeholder="e.g. +91 98765 43210"
@@ -216,7 +214,7 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
                 </div>
                 <div>
                   <label className="text-[11px] font-mono text-slate-400 block mb-1">City / Town</label>
-                  <input 
+                  <input
                     type="text"
                     required
                     placeholder="e.g. Coimbatore, Chennai"

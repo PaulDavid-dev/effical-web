@@ -10,6 +10,7 @@ export const BRANDS = {
     tagline: "Smart Living. Intelligent Security. Connected Spaces.",
     subTaglines: ["SMART LIVING", "INTELLIGENT SECURITY"],
     phone: "+91 79049 83794",
+    alternatePhone: "+91 96778 55553",
     whatsappNumber: "917904983794",
     email: "sales@effficalsmartsoultions.com",
     supportEmail: "sales@effficalsmartsoultions.com",
@@ -24,7 +25,7 @@ export const BRANDS = {
     footerBio: {
       greeting: "Warm greetings from",
       company: "Effical Smart Solutions",
-      description: "South India's premier system integrators for Luxury Home Automation, AI 4K Security Surveillance, Automated Motorized Gates, and Enterprise Gigabit Networking."
+      description: ""
     },
     copyright: `© ${new Date().getFullYear()} EFFICAL SMART SOLUTIONS (ESS). All Rights Reserved.`
   },
@@ -37,6 +38,7 @@ export const BRANDS = {
     tagline: "Smart Home Security & Automation Solutions",
     subTaglines: ["SECURITY ALARMS", "HOME AUTOMATION"],
     phone: "+91 79049 83794",
+    alternatePhone: "+91 96778 55553",
     whatsappNumber: "917904983794",
     email: "sales@effficalsmartsoultions.com",
     supportEmail: "sales@effficalsmartsoultions.com",
@@ -102,13 +104,13 @@ export const INDUSTRIES_DATA = [
     title: "Corporate Offices & Retail",
     subtitle: "Intelligent Workspaces & Seamless Access",
     badge: "Workplace Tech",
-    description: "Future-ready enterprise networks, biometric multi-door access control, automated conference rooms, and centralized 4K surveillance.",
+    description: "Future-ready enterprise networks, biometric multi-door access control, automated conference rooms, and centralized surveillance.",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     features: [
       "Multi-zone cloud access control with biometric & card auth",
       "High-density seamless Wi-Fi 7 enterprise coverage",
       "Intelligent boardrooms with automated projector & audio",
-      "Centralized 24/7 AI-driven CCTV surveillance recording"
+      "Centralized 24/7-driven CCTV surveillance recording"
     ],
     stats: "120+ Commercial Buildings Installed"
   },
@@ -147,12 +149,12 @@ export const INDUSTRIES_DATA = [
     title: "Factories & Logistics Warehouses",
     subtitle: "Heavy-Duty Perimeter & Network Backbone",
     badge: "Industrial Grade",
-    description: "Long-range perimeter AI surveillance, FASTag/RFID automated boom barriers, fiber-optic backbone for SCADA/OT systems, and vehicle access management.",
+    description: "Long-range perimeter surveillance, FASTag/RFID automated boom barriers, fiber-optic backbone for SCADA/OT systems, and vehicle access management.",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
     features: [
       "Automatic heavy-duty boom barriers & sliding gate motors",
       "ANPR (Automated Number Plate Recognition) & RFID vehicle logs",
-      "Extreme-weather 4K thermal cameras with perimeter tripwires",
+      "Extreme-weather thermal cameras with perimeter tripwires",
       "Industrial ruggedized fiber switches & structured cabling"
     ],
     stats: "80+ Industrial Plants Configured"
@@ -181,18 +183,18 @@ export const SOLUTIONS_DATA = [
     id: "cctv-surveillance",
     title: "CCTV Surveillance",
     category: "security",
-    tag: "AI 4K & ColorVu",
+    tag: "ColorVu",
     iconName: "Camera",
     heroImage: "/cctv_surveillance.jpg",
-    shortDesc: "Next-gen 4K AI video surveillance featuring intelligent human & vehicle classification, full-color night vision, and active deterrence.",
-    badge: "24/7 AI NVR",
+    shortDesc: "Next-gen video surveillance featuring intelligent human & vehicle classification, full-color night vision, and active deterrence.",
+    badge: "24/7 NVR",
     subcategories: [
-      { name: "4K ColorVu AI Cameras", desc: "Crisp daylight color clarity even in pitch black darkness with zero infrared grain." },
+      { name: "ColorVu Cameras", desc: "Crisp daylight color clarity even in pitch black darkness with zero infrared grain." },
       { name: "Smart Human & Vehicle Filtering", desc: "Zero false alarm filtering ignores pets, rain, and swaying trees." },
       { name: "Perimeter Virtual Tripwires", desc: "Instant audio alarm and strobe flash when restricted boundary is crossed." },
       { name: "Encrypted Cloud & NVR Vault", desc: "30-90 days continuous recording with encrypted remote smartphone access." }
     ],
-    specs: ["3840x2160 4K UHD Resolution", "H.265+ Smart Codec Compression", "IP67 Weatherproof Vandal Resistance", "Two-Way Audio Talkback"]
+    specs: ["3840x2160 UHD Resolution", "H.265+ Smart Codec Compression", "IP67 Weatherproof Vandal Resistance", "Two-Way Audio Talkback"]
   },
   {
     id: "intrusion-alarm",
@@ -274,7 +276,7 @@ export const SOLUTIONS_DATA = [
     subcategories: [
       { name: "1.5s High-Speed Boom Barriers", desc: "Brushless DC motor with LED illuminated barrier arms for round-the-clock traffic." },
       { name: "Long-Range FASTag RFID Readers", desc: "Hands-free automated gate opening from 6 to 12 meters for registered residents." },
-      { name: "ANPR License Plate Cameras", desc: "AI OCR recognition logs vehicle number plates and grants instantaneous entry." },
+      { name: "ANPR License Plate Cameras", desc: "OCR recognition logs vehicle number plates and grants instantaneous entry." },
       { name: "Anti-Tailgating Loop Detectors", desc: "Magnetic ground inductive loops prevent unauthorized vehicles from slipping behind." }
     ],
     specs: ["1.5s to 3s Adjustable Speed", "5 Million Cycles MTBF Rating", "Integrated Traffic LED Indicator", "Crash-Proof Breakaway Arm Bracket"]
@@ -289,7 +291,7 @@ export const SOLUTIONS_DATA = [
     shortDesc: "Touchless facial recognition terminals, 600lbs electromagnetic locks, motorized turnstiles, and unified attendance payroll software.",
     badge: "ENTERPRISE ACCESS",
     subcategories: [
-      { name: "Touchless Facial Attendance", desc: "Deep learning AI terminal with fever screening, mask detection, and 0.2s matching." },
+      { name: "Touchless Facial Attendance", desc: "Deep learning terminal with fever screening, mask detection, and 0.2s matching." },
       { name: "600lbs Magnetic EM Locks", desc: "Fail-safe electromagnetic lock systems with door status sensor monitoring." },
       { name: "Motorized Flap Barrier Turnstiles", desc: "Brushed stainless steel pedestrian turnstiles for corporate and clubhouse lobbies." },
       { name: "Multi-Door Central Controller", desc: "TCP/IP networked access controller supporting hundreds of doors across buildings." }
@@ -299,10 +301,10 @@ export const SOLUTIONS_DATA = [
 ];
 
 export const ECOSYSTEM_NODES = [
-  { id: "hub", name: "ESS Master Hub", type: "core", icon: "Cpu", status: "ONLINE", desc: "Central AI processing & mesh coordinator" },
+  { id: "hub", name: "ESS Master Hub", type: "core", icon: "Cpu", status: "ONLINE", desc: "Central processing & mesh coordinator" },
   { id: "lights", name: "Lighting & Ambience", type: "smart-home", icon: "Lightbulb", status: "ACTIVE", desc: "Circadian scenes & dimming" },
   { id: "lock", name: "Biometric Smart Locks", type: "smart-home", icon: "KeyRound", status: "LOCKED", desc: "FaceID & anti-tamper security" },
-  { id: "cctv", name: "4K AI Surveillance", type: "security", icon: "Camera", status: "STREAMING", desc: "AI human detection armed" },
+  { id: "cctv", name: "Surveillance", type: "security", icon: "Camera", status: "STREAMING", desc: "Human detection armed" },
   { id: "alarm", name: "Perimeter Security Siren", type: "security", icon: "BellRing", status: "ARMED", desc: "Intrusion tripwire active" },
   { id: "gate", name: "Automated Gate Entry", type: "gate", icon: "DoorClosed", status: "STANDBY", desc: "FASTag scanner standby" },
   { id: "network", name: "Enterprise Wi-Fi Mesh", type: "network", icon: "Wifi", status: "1.2 Gbps", desc: "Ultra-low latency connection" },
@@ -327,7 +329,7 @@ export const PRESET_SCENES = [
     icon: "ShieldAlert",
     lights: "Random Presence Simulation",
     door: "Deadbolt Armed",
-    cctv: "360° AI Patrol Active",
+    cctv: "360° Patrol Active",
     alarm: "Full Perimeter Armed",
     gate: "Locked with Barrier Down",
     desc: "All non-essential appliances switch off, smart locks engage multi-bolt lock, security armed."
@@ -359,29 +361,29 @@ export const PRESET_SCENES = [
 export const FEATURED_PROJECTS = [
   {
     id: "pearl-villa",
-    title: "The Pearl Luxury Villa",
+    title: "Luxury Villa",
     category: "Residential Villa",
     location: "Coimbatore, Tamil Nadu",
     scale: "8,500 sq.ft. Luxury Residence",
     image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
-    tags: ["Full Smart Home", "Biometric Locks", "Perimeter 4K CCTV", "Motorized Gates"],
+    tags: ["Full Smart Home", "Biometric Locks", "Perimeter CCTV", "Motorized Gates"],
     description: "Complete luxury transformation with circadian lighting control across 5 bedrooms, concealed motorized curtains, smart door locks, synchronized sliding gates, and UniFi enterprise Wi-Fi.",
     metrics: { devices: "148 Devices", cameras: "16 Cameras", installationTime: "12 Days" }
   },
   {
     id: "vertex-hq",
-    title: "Vertex Corporate Headquarters",
+    title: "Corporate Headquarters",
     category: "Commercial Office",
     location: "Chennai, Tamil Nadu",
     scale: "25,000 sq.ft. Tech Office",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
-    tags: ["10Gbps Fiber Network", "Touchless Access", "64 AI Cameras", "Automated Boardrooms"],
+    tags: ["10Gbps Fiber Network", "Touchless Access", "64 Cameras", "Automated Boardrooms"],
     description: "Designed and deployed enterprise-grade structured cabling, multi-floor Wi-Fi 7 roaming, biometric face-recognition turnstiles, and automated lighting for energy reduction.",
     metrics: { devices: "320 Endpoints", cameras: "64 Cameras", installationTime: "21 Days" }
   },
   {
     id: "skyview-penthouses",
-    title: "Skyview Signature Penthouses",
+    title: "Signature Penthouses",
     category: "Luxury Apartments",
     location: "Bengaluru / Chennai",
     scale: "12 Ultra-Luxury Units",
@@ -392,14 +394,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     id: "apex-industrial",
-    title: "Apex Logistics & Manufacturing Plant",
+    title: "Logistics & Manufacturing Plant",
     category: "Industrial Plant",
-    location: "Sriperumbudur Industrial Hub",
+    location: "kerala",
     scale: "14-Acre Industrial Compound",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
     tags: ["Heavy Boom Barriers", "FASTag Vehicle Access", "Thermal CCTV", "Fiber Splicing"],
     description: "Heavy-duty perimeter security with automatic hydraulic barriers, FASTag vehicle entry management, long-range thermal perimeter tripwires, and outdoor fiber network backbone.",
-    metrics: { devices: "85 Industrial Nodes", cameras: "42 Thermal/4K", installationTime: "28 Days" }
+    metrics: { devices: "85 Industrial Nodes", cameras: "42 Thermal", installationTime: "28 Days" }
   }
 ];
 
@@ -466,7 +468,7 @@ export const HOW_IT_WORKS_STEPS = [
 
 export const TECH_PARTNERS = [
   { name: "Schneider Electric", category: "Automation & Switches", badge: "Smart Switches" },
-  { name: "Hikvision", category: "AI CCTV & Security", badge: "ColorVu & AI" },
+  { name: "Hikvision", category: "CCTV & Security", badge: "ColorVu &" },
   { name: "Ubiquiti UniFi", category: "Enterprise Wi-Fi & Routing", badge: "Wi-Fi 7 / PoE" },
   { name: "Dahua Technology", category: "Video Intercom & CCTV", badge: "Active Deterrence" },
   { name: "Yale", category: "Digital Door Locks", badge: "Biometric Locks" },
@@ -490,7 +492,7 @@ export const TESTIMONIALS = [
   {
     name: "Karthik Subramanian",
     role: "Managing Director, Vertex Logistics",
-    review: "We engaged ESS for our 14-acre warehouse facility. The automated FASTag boom barriers and 4K perimeter security cameras eliminated unauthorized entries and saved us significant security staffing costs. Truly professional integrators.",
+    review: "We engaged ESS for our 14-acre warehouse facility. The automated FASTag boom barriers and perimeter security cameras eliminated unauthorized entries and saved us significant security staffing costs. Truly professional integrators.",
     rating: 5,
     project: "Commercial Gate & CCTV"
   },
@@ -514,7 +516,7 @@ export const FAQS = [
   },
   {
     q: "Can I control the system when I am traveling abroad?",
-    a: "Yes. All ESS ecosystems sync securely with end-to-end encrypted mobile apps for iOS and Android, allowing you to view live 4K camera streams, unlock gates for guests, and receive instant tamper alerts anywhere in the world."
+    a: "Yes. All ESS ecosystems sync securely with end-to-end encrypted mobile apps for iOS and Android, allowing you to view live camera streams, unlock gates for guests, and receive instant tamper alerts anywhere in the world."
   },
   {
     q: "Do you provide on-site warranty and maintenance?",
