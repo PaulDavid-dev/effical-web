@@ -7,7 +7,7 @@ export default function Footer({ brand = 'ess', onSelectBrand = () => { }, onOpe
 
   return (
     <footer className="relative bg-[#030704] text-slate-400 text-sm overflow-hidden border-t border-emerald-500/20 select-none">
-      
+
       {/* Ambient Radial Glow & Background Subtle Mesh */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,_#064e3b20_0%,_transparent_75%)] pointer-events-none" />
       <div className="absolute top-1/3 left-1/6 w-48 h-48 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />
@@ -45,10 +45,7 @@ export default function Footer({ brand = 'ess', onSelectBrand = () => { }, onOpe
         {/* Bottom Bar: Copyright & Social Channels */}
         <div className="pt-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 font-medium">
           <p className="text-center sm:text-left">
-            Copyright © 2026 All Rights Reserved {activeBrand.fullName || activeBrand.name} | Designed by{' '}
-            <span className="text-lime-400 font-semibold hover:text-lime-300 transition-colors cursor-pointer">
-              Digitalsinfo
-            </span>
+            Copyright © 2026 All Rights Reserved {activeBrand.fullName || activeBrand.name}
           </p>
 
           {/* Social Channels */}
