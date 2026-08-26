@@ -55,29 +55,29 @@ export default function FinalCTA({ onOpenPlanner }) {
           </div>
 
           {/* Quick Contact Info Strip */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-8 border-t border-white/10 font-mono text-xs text-slate-300">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-8 border-t border-white/10 font-mono text-[11px] sm:text-xs text-slate-300">
             <a 
               href={`tel:${SITE_INFO.phone}`}
-              className="p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-lime-500/30 flex items-center justify-center gap-2 transition-colors"
+              className="h-12 px-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-lime-500/30 hover:bg-white/[0.06] flex items-center justify-center gap-2 transition-colors"
             >
               <PhoneCall className="w-4 h-4 text-lime-400 shrink-0" />
-              <span>{SITE_INFO.phone}</span>
+              <span className="whitespace-nowrap">{SITE_INFO.phone}</span>
             </a>
 
             <a 
               href={`tel:${SITE_INFO.alternatePhone}`}
-              className="p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-lime-500/30 flex items-center justify-center gap-2 transition-colors"
+              className="h-12 px-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-lime-500/30 hover:bg-white/[0.06] flex items-center justify-center gap-2 transition-colors"
             >
               <PhoneCall className="w-4 h-4 text-lime-400 shrink-0" />
-              <span>{SITE_INFO.alternatePhone}</span>
+              <span className="whitespace-nowrap">{SITE_INFO.alternatePhone}</span>
             </a>
 
             <a
               href={`mailto:${SITE_INFO.email}`}
-              className="p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-lime-500/30 flex items-center justify-center gap-2 transition-colors sm:col-span-2 lg:col-span-1"
+              className="h-12 px-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-lime-500/30 hover:bg-white/[0.06] flex items-center justify-center gap-2 transition-colors"
             >
               <Mail className="w-4 h-4 text-lime-400 shrink-0" />
-              <span className="break-all">{SITE_INFO.email}</span>
+              <span className="whitespace-nowrap">{SITE_INFO.email}</span>
             </a>
           </div>
 
