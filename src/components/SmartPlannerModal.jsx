@@ -48,10 +48,9 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
     setIsSubmitting(true);
 
     try {
-      // NOTE: Replace these with your actual EmailJS credentials
-      const serviceId = 'service_0bcdori';
-      const templateId = 'template_fqoeq74';
-      const publicKey = 'kc2_yrA90Qjiys4gv';
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_0bcdori';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_fqoeq74';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'kc2_yrA90Qjiys4gv';
 
       const templateParams = {
         name: name,
