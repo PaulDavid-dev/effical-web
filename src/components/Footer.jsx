@@ -18,162 +18,10 @@ export default function Footer({ brand = 'ess', onSelectBrand = () => { }, onOpe
       <div className="absolute top-1/2 right-16 w-2 h-2 rounded-full bg-lime-400/60 shadow-[0_0_8px_#a3e635] pointer-events-none" />
 
       {/* Tightly bounded container to eliminate over-spacing */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 pb-7">
-        
-        {/* Top 3-Column Section */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 pb-6 items-start">
-          
-          {/* Column 1: Quick Links */}
-          <div className="md:col-span-3 lg:col-span-3 flex flex-col">
-            <h3 className="text-white font-bold text-base tracking-tight mb-3.5 font-heading">
-              Quick Links
-            </h3>
-            <ul className="space-y-2 text-[13px] sm:text-sm text-slate-300 font-normal">
-              <li>
-                <a href="#why-ess" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                  About Company
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                  Our Recent Projects
-                </a>
-              </li>
-              <li>
-                <a href="#solutions" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                  Our Services
-                </a>
-              </li>
-              <li>
-                {onOpenPlanner ? (
-                  <button 
-                    type="button"
-                    onClick={onOpenPlanner} 
-                    className="hover:text-lime-400 transition-colors duration-200 text-left cursor-pointer"
-                  >
-                    Project Discussion
-                  </button>
-                ) : (
-                  <a href="#contact" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                    Project Discussion
-                  </a>
-                )}
-              </li>
-              <li>
-                <a 
-                  href={`https://wa.me/${activeBrand.whatsappNumber}?text=Hi%20${encodeURIComponent(activeBrand.shortName)}%2C%20I%20would%20like%20to%20talk%20with%20your%20experts.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-lime-400 transition-colors duration-200 inline-block"
-                >
-                  Talk with our Experts
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 2: All Services */}
-          <div className="md:col-span-4 lg:col-span-4 flex flex-col">
-            <h3 className="text-white font-bold text-base tracking-tight mb-3.5 font-heading">
-              All Services
-            </h3>
-            <ul className="space-y-2 text-[13px] sm:text-sm text-slate-300 font-normal">
-              <li>
-                <a href="#solutions" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                  Home Automation
-                </a>
-              </li>
-              <li>
-                <a href="#solutions" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                  Gate Automation
-                </a>
-              </li>
-              <li>
-                <a href="#solutions" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                  CCTV Installation
-                </a>
-              </li>
-              <li>
-                <a href="#solutions" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                  Curtain Automation
-                </a>
-              </li>
-              <li>
-                <a href="#solutions" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                  Lift Installation
-                </a>
-              </li>
-              <li>
-                <a href="#solutions" className="hover:text-lime-400 transition-colors duration-200 inline-block">
-                  Home Theatre Installation
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Contact Us */}
-          <div className="md:col-span-5 lg:col-span-5 flex flex-col">
-            <div className="flex items-center gap-3 mb-3.5">
-              <h3 className="text-white font-bold text-base tracking-tight shrink-0 font-heading">
-                Contact Us
-              </h3>
-              <div className="h-px flex-1 bg-gradient-to-r from-emerald-500/40 via-emerald-500/10 to-transparent" />
-            </div>
-
-            {/* Glowing Gradient Border Contact Card */}
-            <div className="relative rounded-xl bg-gradient-to-b from-[#08150d]/90 to-[#040a06]/90 border border-emerald-500/25 shadow-xl backdrop-blur-md p-5 overflow-hidden">
-              {/* Signature Top Neon Gradient Accent Border */}
-              <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-emerald-500 via-lime-400 to-emerald-400 shadow-[0_0_10px_rgba(163,230,53,0.4)]" />
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 divide-y sm:divide-y-0 sm:divide-x divide-emerald-500/20">
-                {/* Left: SEND US MAIL */}
-                <div className="flex flex-col justify-center">
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-400 mb-1 font-mono">
-                    SEND US MAIL
-                  </span>
-                  <a 
-                    href={`mailto:${activeBrand.email}`}
-                    className="text-xs sm:text-[12.5px] text-slate-200 hover:text-lime-300 transition-colors font-medium"
-                    title={activeBrand.email}
-                  >
-                    {activeBrand.email}
-                  </a>
-                </div>
-
-                {/* Right: PHONE */}
-                <div className="flex flex-col justify-center pt-3 sm:pt-0 sm:pl-5">
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-400 mb-1 font-mono">
-                    PHONE
-                  </span>
-                  <a 
-                    href={`tel:${activeBrand.phone}`}
-                    className="text-xs sm:text-[13px] text-slate-200 hover:text-lime-300 transition-colors font-mono font-medium"
-                  >
-                    {activeBrand.phone}
-                  </a>
-                  {activeBrand.alternatePhone && (
-                    <a 
-                      href={`tel:${activeBrand.alternatePhone}`}
-                      className="text-xs sm:text-[12.5px] text-slate-400 hover:text-lime-300 transition-colors font-mono font-medium mt-0.5"
-                    >
-                      {activeBrand.alternatePhone}
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Ambient Decorative Dot on Left of Divider */}
-        <div className="relative my-4">
-          <div className="absolute -top-1 left-1/4 w-2 h-2 rounded-full bg-lime-400 shadow-[0_0_8px_#a3e635] pointer-events-none" />
-          <div className="border-t border-emerald-500/20" />
-        </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-2">
 
         {/* Middle Bar: Logo on Left, Navigation Links on Right */}
-        <div className="py-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-emerald-500/15">
+        <div className="pb-3 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-emerald-500/15">
           {/* Logo with Green Accent Dot Below */}
           <div className="flex flex-col items-center sm:items-start gap-1">
             <Logo brand={brand} variant="dark" size="xl" showTagline={false} />
@@ -195,7 +43,7 @@ export default function Footer({ brand = 'ess', onSelectBrand = () => { }, onOpe
         </div>
 
         {/* Bottom Bar: Copyright & Social Channels */}
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 font-medium">
+        <div className="pt-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 font-medium">
           <p className="text-center sm:text-left">
             Copyright © 2026 All Rights Reserved {activeBrand.fullName || activeBrand.name} | Designed by{' '}
             <span className="text-lime-400 font-semibold hover:text-lime-300 transition-colors cursor-pointer">

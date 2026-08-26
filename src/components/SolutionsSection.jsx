@@ -24,15 +24,26 @@ import {
 } from 'lucide-react';
 import { SOLUTIONS_DATA, SITE_INFO } from '../data/siteContent';
 
+import {
+  NetworkIcon,
+  CameraIcon,
+  IntrusionIcon,
+  SmartLightingIcon,
+  SmartLocksIcon,
+  GateIcon,
+  VehicleAccessIcon,
+  TimeAttendanceIcon
+} from './CustomIcons';
+
 const iconComponents = {
-  Network: Network,
-  Camera: Camera,
-  ShieldAlert: ShieldAlert,
-  Lightbulb: Lightbulb,
-  Lock: Lock,
-  ShieldCheck: ShieldCheck,
-  Radio: Radio,
-  UserCheck: UserCheck
+  Network: NetworkIcon,
+  Camera: CameraIcon,
+  ShieldAlert: IntrusionIcon,
+  Lightbulb: SmartLightingIcon,
+  Lock: SmartLocksIcon,
+  ShieldCheck: GateIcon,
+  Radio: VehicleAccessIcon,
+  UserCheck: TimeAttendanceIcon
 };
 
 const CATEGORIES = [
@@ -65,7 +76,7 @@ export default function SolutionsSection({ onOpenPlanner }) {
   };
 
   return (
-    <section id="solutions" className="py-20 md:py-24 relative overflow-hidden bg-[#030604] z-10">
+    <section id="solutions" className="pt-10 pb-20 md:pt-12 md:pb-24 relative overflow-hidden bg-[#030604] z-10">
       
       {/* Background ambient lighting glows */}
       <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -101,15 +112,8 @@ export default function SolutionsSection({ onOpenPlanner }) {
         </div>
 
         {/* === 8-PILLAR QUICK VISUAL NAVIGATOR STRIP (Matching reference icons) === */}
-        <div className="mb-10 p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md">
-          <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-2.5 px-2 flex items-center justify-between">
-            <span className="flex items-center gap-1.5 text-lime-400">
-              <Layers className="w-3.5 h-3.5" /> 8 CORE SOLUTION DISCIPLINES:
-            </span>
-            <span className="hidden sm:inline text-slate-400">Click to locate solution</span>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2">
+        <div className="mb-12 overflow-x-auto pb-4">
+          <div className="flex items-stretch min-w-max divide-x divide-white/10 border-y border-white/10 py-6">
             {SOLUTIONS_DATA.map((sol) => {
               const Icon = iconComponents[sol.iconName] || Network;
               const isHighlight = highlightedId === sol.id;
@@ -119,16 +123,16 @@ export default function SolutionsSection({ onOpenPlanner }) {
                   key={sol.id}
                   type="button"
                   onClick={() => handleQuickNavClick(sol.id)}
-                  className={`p-2.5 rounded-xl border flex flex-col items-center text-center transition-all cursor-pointer group ${
-                    isHighlight
-                      ? 'bg-lime-500/20 border-lime-400 ring-2 ring-lime-400/40 shadow-lg shadow-lime-500/20 scale-105'
-                      : 'bg-black/40 border-white/10 hover:border-lime-500/40 hover:bg-emerald-950/30'
-                  }`}
+                  className="flex-1 min-w-[130px] lg:min-w-[150px] px-2 sm:px-4 flex flex-col items-center justify-start text-center transition-all cursor-pointer group hover:bg-white/[0.02]"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-lime-400 group-hover:text-lime-300 group-hover:scale-110 transition-transform mb-1.5">
-                    <Icon className="w-4 h-4" />
+                  <div className={`w-14 h-14 mb-3 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-1 ${
+                    isHighlight ? 'text-lime-400 scale-110' : 'text-slate-300 group-hover:text-lime-400'
+                  }`}>
+                    <Icon strokeWidth={1.5} className="w-10 h-10" />
                   </div>
-                  <span className="text-[10px] font-bold uppercase tracking-tight text-slate-300 group-hover:text-white leading-tight">
+                  <span className={`text-[10px] sm:text-[11px] font-bold uppercase tracking-wider leading-tight transition-colors ${
+                    isHighlight ? 'text-lime-400' : 'text-slate-400 group-hover:text-white'
+                  }`}>
                     {sol.title.replace(' Systems', '').replace(' Infrastructure', '')}
                   </span>
                 </button>

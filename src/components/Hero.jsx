@@ -192,7 +192,7 @@ export default function Hero({ onOpenPlanner }) {
       return {
         image: '/lights_on_room.jpg',
         title: 'CAM 02: Living Room Interior',
-        badge: lightsActive ? '80% CIRCADIAN ON' : 'LIGHTS STANDBY (OFF)',
+        badge: lightsActive ? 'LIGHTS STANDBY (ON)' : 'LIGHTS STANDBY (OFF)',
         badgeColor: lightsActive ? 'bg-lime-400 text-slate-950 font-bold' : 'bg-slate-700 text-white',
         statusText: lightsActive ? 'WARM AMBIENCE ACTIVE' : 'LIVING ROOM LIGHTS OFF',
         statusColor: lightsActive ? 'text-lime-300' : 'text-slate-400',
@@ -253,7 +253,7 @@ export default function Hero({ onOpenPlanner }) {
         }
       `}</style>
 
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden cyber-grid-bg">
+      <section className="relative pt-32 pb-10 md:pt-40 md:pb-12 overflow-hidden cyber-grid-bg">
         {/* Glow Orbs in background */}
         <div className="absolute top-1/4 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -296,9 +296,20 @@ export default function Hero({ onOpenPlanner }) {
               </div>
 
               {/* Tagline / Subtitle */}
-              <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-light leading-relaxed">
-                Where luxury meets intelligent automation. We engineer custom <strong className="text-white font-semibold hover:text-lime-400 transition-colors">Home Automation</strong>, <strong className="text-white font-semibold hover:text-emerald-400 transition-colors">CCTV Security</strong>, <strong className="text-white font-semibold hover:text-teal-400 transition-colors">Video Intercoms</strong>, <strong className="text-white font-semibold hover:text-lime-400 transition-colors">Motorized Gates</strong>, and <strong className="text-white font-semibold hover:text-teal-400 transition-colors">Enterprise Gigabit Networking</strong> into one unified, calm space. One team, one system, from gate to bedroom.
-              </p>
+              <div className="text-base sm:text-lg text-slate-300 max-w-2xl font-light leading-relaxed space-y-4">
+                <p className="text-white font-medium">
+                  Where Luxury Meets Intelligent Automation
+                </p>
+                <p>
+                  We engineer custom Home Automation, Security Systems, and Networking Solutions into one unified, seamless environment.
+                </p>
+                <p>
+                  From gate to bedroom, every system works together to create a space that is secure, connected, effortless, and intelligently controlled.
+                </p>
+                <p className="text-lime-400 font-semibold">
+                  One Team. One System. Complete Control.
+                </p>
+              </div>
 
               {/* Feature Pills */}
               <div className="flex flex-wrap gap-2 pt-1 font-mono text-xs text-slate-300">
@@ -397,7 +408,7 @@ export default function Hero({ onOpenPlanner }) {
                     <div className="flex items-center justify-between mb-1.5">
                       <Lightbulb className={`w-4 h-4 ${lightsActive ? 'text-lime-400' : 'text-slate-500'}`} />
                       <span className={`text-[9px] font-mono font-bold px-1 py-0.5 rounded ${lightsActive ? 'bg-lime-400 text-slate-950' : 'bg-slate-700 text-white'}`}>
-                        {lightsActive ? '80%' : 'OFF'}
+                        {lightsActive ? 'ON' : 'OFF'}
                       </span>
                     </div>
                     <p className="text-xs font-semibold text-slate-200 truncate">Living Room</p>
