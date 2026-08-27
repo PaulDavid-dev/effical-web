@@ -55,7 +55,7 @@ export default function FinalCTA({ onOpenPlanner }) {
           </div>
 
           {/* Quick Contact Info Strip */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-8 border-t border-white/10 font-mono text-[11px] sm:text-xs text-slate-300">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 pt-8 border-t border-white/10 font-mono text-[11px] sm:text-xs text-slate-300">
             <a 
               href={`tel:${SITE_INFO.phone}`}
               className="h-12 px-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-lime-500/30 hover:bg-white/[0.06] flex items-center justify-center gap-2 transition-colors"
