@@ -34,7 +34,9 @@ export default function Navbar({
     { title: 'Intrusion Detection & Fire Alarms', category: 'Security', link: '#solutions' },
     { title: 'High-Speed Enterprise WiFi & Networking', category: 'Network', link: '#solutions' },
     { title: 'Completed Villa & HQ Projects', category: 'Portfolio', link: '#projects' },
-    { title: 'Industries & Workspaces We Work With', category: 'Industries', link: '#industries' }
+    { title: 'Industries & Workspaces We Work With', category: 'Industries', link: '#industries' },
+    { title: 'Privacy Policy & Data Security', category: 'Legal', link: '#privacy' },
+    { title: 'Terms & Conditions (2-Yr Warranty & AMC)', category: 'Legal', link: '#terms' }
   ];
 
   const filteredServices = searchQuery.trim() === ''
@@ -61,8 +63,6 @@ export default function Navbar({
         setActiveSection('projects');
       } else if (document.getElementById('solutions')?.offsetTop && scrollPos >= document.getElementById('solutions').offsetTop - 200) {
         setActiveSection('services');
-      } else if (document.getElementById('how-it-works')?.offsetTop && scrollPos >= document.getElementById('how-it-works').offsetTop - 200) {
-        setActiveSection('about');
       }
     };
 
@@ -122,20 +122,6 @@ export default function Navbar({
             >
               Home
               {activeSection === 'home' && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-lime-400 rounded-full"></span>
-              )}
-            </a>
-
-            <a
-              href="#how-it-works"
-              className={`text-sm xl:text-[15px] font-medium tracking-wide transition-colors duration-200 relative py-1 ${
-                activeSection === 'about'
-                  ? 'text-lime-400 font-semibold'
-                  : 'text-slate-300 hover:text-lime-400'
-              }`}
-            >
-              About Us
-              {activeSection === 'about' && (
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-lime-400 rounded-full"></span>
               )}
             </a>
@@ -266,14 +252,6 @@ export default function Navbar({
                 className="px-4 py-2.5 text-sm font-semibold text-lime-400 rounded-xl hover:bg-white/5"
               >
                 Home
-              </a>
-
-              <a
-                href="#how-it-works"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-2.5 text-sm font-medium text-slate-200 hover:text-lime-400 rounded-xl hover:bg-white/5"
-              >
-                About Us
               </a>
 
               <a

@@ -2,7 +2,13 @@ import React from 'react';
 import { BRANDS } from '../data/siteContent';
 import Logo from './Logo';
 
-export default function Footer({ brand = 'ess', onSelectBrand = () => { }, onOpenPlanner }) {
+export default function Footer({ 
+  brand = 'ess', 
+  onSelectBrand = () => { }, 
+  onOpenPlanner,
+  onOpenPrivacy,
+  onOpenTerms
+}) {
   const activeBrand = BRANDS[brand] || BRANDS.ess;
 
   return (
@@ -33,12 +39,20 @@ export default function Footer({ brand = 'ess', onSelectBrand = () => { }, onOpe
             <a href="#contact" className="hover:text-lime-400 transition-colors">
               Contact Us
             </a>
-            <a href="#privacy" className="hover:text-lime-400 transition-colors">
+            <button
+              type="button"
+              onClick={onOpenPrivacy}
+              className="hover:text-lime-400 transition-colors cursor-pointer"
+            >
               Privacy Policy
-            </a>
-            <a href="#terms" className="hover:text-lime-400 transition-colors">
+            </button>
+            <button
+              type="button"
+              onClick={onOpenTerms}
+              className="hover:text-lime-400 transition-colors cursor-pointer"
+            >
               Terms & Conditions
-            </a>
+            </button>
           </div>
         </div>
 

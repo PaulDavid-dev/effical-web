@@ -54,11 +54,22 @@ export default function SmartPlannerModal({ isOpen, onClose, brand = 'ess' }) {
 
       const templateParams = {
         name: name,
+        from_name: name,
+        user_name: name,
         email: email,
+        reply_to: email,
+        user_email: email,
         phone: phone,
+        user_phone: phone,
         city: city,
+        user_city: city,
+        to_email: activeBrand.email || 'Info@efficalsmartsolutions.com',
+        recipient_email: 'Info@efficalsmartsolutions.com',
+        to_name: activeBrand.fullName || 'Effical Smart Solutions',
         subject: `Enquiry for ${activeBrand.fullName}`,
-        message: message
+        message: message,
+        user_message: message,
+        brand: activeBrand.fullName
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);

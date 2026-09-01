@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustedIndustries from './components/TrustedIndustries';
@@ -17,13 +17,32 @@ import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 import SmartPlannerModal from './components/SmartPlannerModal';
+import PrivacyPolicyModal from './components/PrivacyPolicyModal';
+import TermsModal from './components/TermsModal';
 
 export default function App() {
   const [plannerOpen, setPlannerOpen] = useState(false);
+  const [legalModal, setLegalModal] = useState(null); // 'privacy' | 'terms' | null
   const [brand, setBrand] = useState('ess'); // 'ess' | 'et'
 
   const openPlanner = () => setPlannerOpen(true);
   const closePlanner = () => setPlannerOpen(false);
+
+  // Handle URL hash routing for direct links like #privacy or #terms
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash === '#privacy') {
+        setLegalModal('privacy');
+      } else if (hash === '#terms' || hash === '#terms-and-conditions') {
+        setLegalModal('terms');
+      }
+    };
+
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#040806] text-[#f8fafc] relative selection:bg-emerald-500/30 selection:text-lime-200">
@@ -43,31 +62,29 @@ export default function App() {
           onOpenPlanner={openPlanner}
         />
 
-        {/* 4. Solutions Section (Smart Home, CCTV, Gate Automation, Networking) */}
+        {/* 2. Solutions Section (Smart Home, CCTV, Gate Automation, Networking) */}
         <SolutionsSection onOpenPlanner={openPlanner} />
 
-        {/* 3. Luxury Glass Touch Switches & 3-Protocol Architecture */}
+        {/* 4. Luxury Glass Touch Switches & 3-Protocol Architecture */}
         {/* <SmartTouchSwitchSection onOpenPlanner={openPlanner} /> */}
 
-        {/* 2. Trusted By Homes & Businesses (Industries) */}
+        {/* 5. Trusted By Homes & Businesses (Industries) */}
         <TrustedIndustries onOpenPlanner={openPlanner} />
-        {/* 5. One Smart Ecosystem Interactive Scene Simulator */}
+
+        {/* 6. One Smart Ecosystem Interactive Scene Simulator */}
         {/* <EcosystemSimulator onOpenPlanner={openPlanner} /> */}
 
-        {/* 6. Security That Reacts (Live Threat Response Simulation) */}
+        {/* 7. Security That Reacts (Live Threat Response Simulation) */}
         {/* <SecurityReacts onOpenPlanner={openPlanner} /> */}
 
-        {/* 7. Smart Energy Intelligence & Solar Telemetry Dashboard */}
+        {/* 8. Smart Energy Intelligence & Solar Telemetry Dashboard */}
         {/* <EnergyTelemetrySection onOpenPlanner={openPlanner} /> */}
 
-        {/* 8. Technology Partners & Brand Marquee */}
+        {/* 9. Technology Partners & Brand Marquee */}
         <TechPartners />
 
-        {/* 9. Featured Projects Portfolio (Villas, HQ, Penthouses, Plants) */}
+        {/* 10. Featured Projects Portfolio (Villas, HQ, Penthouses, Plants) */}
         <FeaturedProjects onOpenPlanner={openPlanner} />
-
-        {/* 10. Why ESS (5 Pillars & Turnkey vs Generic Comparison) */}
-        {/* <WhyESS onOpenPlanner={openPlanner} /> */}
 
         {/* 11. How We Work (5-Step Journey from Idea to Installation) */}
         <HowWeWork onOpenPlanner={openPlanner} />
@@ -87,6 +104,8 @@ export default function App() {
         brand={brand}
         onSelectBrand={setBrand}
         onOpenPlanner={openPlanner}
+        onOpenPrivacy={() => setLegalModal('privacy')}
+        onOpenTerms={() => setLegalModal('terms')}
       />
 
       {/* Floating Quick Action Widget (WhatsApp, Call, Scroll Top) */}
@@ -96,6 +115,30 @@ export default function App() {
       <SmartPlannerModal
         isOpen={plannerOpen}
         onClose={closePlanner}
+        brand={brand}
+      />
+
+      {/* Full-Content Privacy Policy Modal */}
+      <PrivacyPolicyModal
+        isOpen={legalModal === 'privacy'}
+        onClose={() => {
+          setLegalModal(null);
+          if (window.location.hash === '#privacy') {
+            window.history.replaceState(null, '', window.location.pathname);
+          }
+        }}
+        brand={brand}
+      />
+
+      {/* Full-Content Terms & Conditions Modal */}
+      <TermsModal
+        isOpen={legalModal === 'terms'}
+        onClose={() => {
+          setLegalModal(null);
+          if (window.location.hash === '#terms' || window.location.hash === '#terms-and-conditions') {
+            window.history.replaceState(null, '', window.location.pathname);
+          }
+        }}
         brand={brand}
       />
 
